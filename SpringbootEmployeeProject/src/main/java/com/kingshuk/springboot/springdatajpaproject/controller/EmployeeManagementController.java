@@ -68,8 +68,9 @@ public class EmployeeManagementController {
 	}
 	
 	@PatchMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public EmployeeDto updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
-		return null;
+	public void updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
+		//System.out.println(employeeDto);
+		employeeManagementService.partialUpdateEmployee(employeeDto);
 	}
 	
 	

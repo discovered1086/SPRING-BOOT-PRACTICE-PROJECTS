@@ -81,5 +81,17 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 		}
 
 	}
+	
+	public void partialUpdateEmployee(EmployeeDto employeeDto) {
+		Employee employee = repository.findById(employeeDto.getEmployeeId()).orElse(null);
+		
+		if(employee!=null) {
+			Employee employee2 = new Employee(employeeDto, employee.getAddress(), employee.getDepartment());
+			
+			
+			repository.save(employee2);
+		}
+		
+	}
 
 }

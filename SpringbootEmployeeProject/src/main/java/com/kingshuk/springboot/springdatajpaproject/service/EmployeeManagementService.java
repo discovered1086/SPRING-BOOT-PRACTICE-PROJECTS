@@ -18,5 +18,7 @@ public interface EmployeeManagementService {
 	Employee getEmployeeById(long employeeId);
 	
 	void deleteEmployee(long employeeId);
+	
+	void partialUpdateEmployee(EmployeeDto employeeDto);
 
 }
