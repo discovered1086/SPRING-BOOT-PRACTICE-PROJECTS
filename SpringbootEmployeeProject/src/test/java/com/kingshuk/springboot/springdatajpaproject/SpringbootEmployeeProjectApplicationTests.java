@@ -26,6 +26,12 @@ import com.kingshuk.springboot.springdatajpaproject.entities.Department;
 import com.kingshuk.springboot.springdatajpaproject.entities.Employee;
 import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementService;
 
+/**
+ * What this class is doing here is performing unit testing, not end to end 
+ * integration test and that's exactly why we have mocked out the employee management service class
+ * @author kingshuksmacbookpro
+ *
+ */
 @RunWith(SpringRunner.class)
 //@SpringBootTest(classes = {EmployeeManagementController.class})
 @WebMvcTest(value=EmployeeManagementController.class)
