@@ -1,7 +1,6 @@
 package com.kingshuk.springboot.springdatajpaproject;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,6 +8,7 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -31,6 +31,9 @@ import com.kingshuk.springboot.springdatajpaproject.entities.Employee;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringBootEmployeeControllerTest {
+	
+	@Value("${employeeapi.services.url}")
+	private String serviceUrl;
 
 	@Autowired
 	private RestTemplateBuilder restTemplateBuilder;
@@ -45,7 +48,7 @@ public class SpringBootEmployeeControllerTest {
 
 	static {
 		AddressDto address = new AddressDto();
-		address.setAddressId(9L);
+		//address.setAddressId(9L);
 		address.setAddressLine1("771 Shady Grove Ln");
 		address.setAddressLine2("");
 		address.setCity("Buffalo Grove");
@@ -53,12 +56,12 @@ public class SpringBootEmployeeControllerTest {
 		address.setZipCode("60089");
 
 		DepartmentDto departmentDto = new DepartmentDto();
-		departmentDto.setDepartmentId(9l);
-		departmentDto.setDepartmentName("IT");
+		//departmentDto.setDepartmentId(9l);
+		departmentDto.setDepartmentName("Architecture");
 
 		employeeDto = new EmployeeDto();
-		employeeDto.setEmployeeId(9l);
-		employeeDto.setFirstName("Amit");
+		//employeeDto.setEmployeeId(9l);
+		employeeDto.setFirstName("Kingshuk");
 		employeeDto.setLastName("Mukherjee");
 		employeeDto.setAddress(address);
 		employeeDto.setDepartment(departmentDto);
@@ -73,8 +76,9 @@ public class SpringBootEmployeeControllerTest {
 
 	@Test
 	public void testSingleEmployeeGet() {
+		System.out.println(serviceUrl);
 		RestTemplate restTemplate = restTemplateBuilder.build();
-		EmployeeDto employee2 = restTemplate.getForObject("http://localhost:8080/SpringBootEmployeeProject/employees/9",
+		EmployeeDto employee2 = restTemplate.getForObject(serviceUrl+"/14",
 				EmployeeDto.class);
 
 		// assertEquals(employee, employee2);
@@ -87,13 +91,40 @@ public class SpringBootEmployeeControllerTest {
 	@Test
 	public void testSingleEmployeeCreate() {
 		RestTemplate restTemplate = restTemplateBuilder.build();
-		EmployeeDto employee2 = restTemplate.getForObject("http://localhost:8080/SpringBootEmployeeProject/employees/9",
-				EmployeeDto.class);
+		Employee employee2 = restTemplate.postForObject(serviceUrl,
+				 employeeDto, Employee.class);
 
 		// assertEquals(employee, employee2);
-		assertNotNull(employee2);
+		assertNotNull("The object returned is null",employee2);
 
-		assertEquals(employeeDto, employee2);
+		assertEquals(employee, employee2);
+
+	}
+	
+	@Test
+	public void testSingleEmployeeUpdate() {
+		RestTemplate restTemplate = restTemplateBuilder.build();
+		
+		EmployeeDto employee2 = restTemplate.getForObject(serviceUrl+"/14",
+				EmployeeDto.class);
+		
+		assertNotNull(employee2);
+		
+		
+		DepartmentDto department = new DepartmentDto();
+		department.setDepartmentId(2l);
+		department.setDepartmentName("Architecture");
+		
+		employee2.setDepartment(department);
+		
+		restTemplate.put(serviceUrl, employee2);
+		
+		EmployeeDto employee3 = restTemplate.getForObject(serviceUrl+"/14",
+				EmployeeDto.class);
+		
+		assertNotNull(employee3);
+		
+		assertEquals(employeeDto.getDepartment().getDepartmentName(), employee3.getDepartment().getDepartmentName());
 
 	}
 

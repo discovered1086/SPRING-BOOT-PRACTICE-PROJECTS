@@ -1,8 +1,10 @@
 package com.kingshuk.springboot.springdatajpaproject.service;
 
 
-import java.util.List;
+import static org.hamcrest.CoreMatchers.nullValue;
 
+import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,9 +52,11 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
 	@Override
 	@Transactional
-	public void addOrUpdateEmployee(EmployeeDto employee) {
+	public Employee addNewEmployee(EmployeeDto employee) {
 
 		Employee employee2 = null;
+		
+		Optional<Employee> returnEmployee = Optional.empty();
 
 		Address address = addressRepository
 				.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode(employee.getAddress().getAddressLine1(),
@@ -74,11 +78,51 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 			department = new Department(employee.getDepartment().getDepartmentId(),
 					employee.getDepartment().getDepartmentName());
 		}
-
+		
 		if (employee3 == null) {
 			employee2 = new Employee(employee, address, department);
-			repository.save(employee2);
+			returnEmployee = Optional.of(repository.save(employee2));
 		}
+		
+		return returnEmployee.orElse(employee3);
+
+	}
+	
+	@Override
+	@Transactional
+	public Employee updateEmployee(EmployeeDto employee) {
+
+		Employee employee2 = null;
+		
+		Optional<Employee> returnEmployee = Optional.empty();
+
+		Address address = addressRepository
+				.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode(employee.getAddress().getAddressLine1(),
+						employee.getAddress().getAddressLine2(), employee.getAddress().getCity(),
+						employee.getAddress().getState(), employee.getAddress().getZipCode())
+				.orNull();
+
+		Department department = departmentRepository.findByDepartmentName(employee.getDepartment().getDepartmentName())
+				.orNull();
+
+		Employee employee3 = repository.findByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())
+				.orNull();
+
+		if (address == null) {
+			address = new Address(employee.getAddress());
+		}
+
+		if (department == null) {
+			department = new Department(employee.getDepartment().getDepartmentId(),
+					employee.getDepartment().getDepartmentName());
+		}
+		
+		if (employee3 != null) {
+			employee2 = new Employee(employee, address, department);
+			returnEmployee = Optional.of(repository.save(employee2));
+		}
+		
+		return returnEmployee.orElse(employee3);
 
 	}
 	

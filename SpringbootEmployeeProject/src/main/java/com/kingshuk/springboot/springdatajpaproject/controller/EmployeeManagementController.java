@@ -33,11 +33,10 @@ public class EmployeeManagementController {
 
 	@PostMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
-	public EmployeeDto createEmployee(@RequestBody EmployeeDto employee) {
+	public Employee createEmployee(@RequestBody EmployeeDto employee) {
 
-		employeeManagementService.addOrUpdateEmployee(employee);
+		return employeeManagementService.addNewEmployee(employee);
 
-		return employee;
 	}
 
 	@GetMapping(path = "/employees", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
@@ -60,16 +59,14 @@ public class EmployeeManagementController {
 	}
 
 	@PutMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public EmployeeDto updateEmployee(@RequestBody EmployeeDto employee) {
+	public Employee updateEmployee(@RequestBody EmployeeDto employee) {
 		
-		employeeManagementService.addOrUpdateEmployee(employee);
+		return employeeManagementService.updateEmployee(employee);
 		
-		return employee;
 	}
 	
 	@PatchMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public void updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
-		//System.out.println(employeeDto);
 		employeeManagementService.partialUpdateEmployee(employeeDto);
 	}
 	
