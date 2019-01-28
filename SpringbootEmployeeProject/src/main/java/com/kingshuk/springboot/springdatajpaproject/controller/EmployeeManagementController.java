@@ -35,7 +35,7 @@ public class EmployeeManagementController {
 			MediaType.APPLICATION_JSON_VALUE })
 	public Employee createEmployee(@RequestBody EmployeeDto employee) {
 
-		return employeeManagementService.addNewEmployee(employee);
+		return employeeManagementService.addOrUpdateEmployee(employee);
 
 	}
 
@@ -61,7 +61,7 @@ public class EmployeeManagementController {
 	@PutMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public Employee updateEmployee(@RequestBody EmployeeDto employee) {
 		
-		return employeeManagementService.updateEmployee(employee);
+		return employeeManagementService.addOrUpdateEmployee(employee);
 		
 	}
 	

@@ -52,13 +52,13 @@ public class WebApplicationConfigurations implements WebMvcConfigurer{
 	}*/
 	
 	
-	@Bean
+	/*@Bean
     public ViewResolver getViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/pages/");
         resolver.setSuffix(".jsp");
         return resolver;
-    }
+    }*/
     
 
 }

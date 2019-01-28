@@ -1,6 +1,5 @@
 package com.kingshuk.springboot.springdatajpaproject.service;
 
-
 import static org.hamcrest.CoreMatchers.nullValue;
 
 import java.util.List;
@@ -52,90 +51,34 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
 	@Override
 	@Transactional
-	public Employee addNewEmployee(EmployeeDto employee) {
-
-		Employee employee2 = null;
-		
-		Optional<Employee> returnEmployee = Optional.empty();
+	public Employee addOrUpdateEmployee(EmployeeDto employee) {
 
 		Address address = addressRepository
 				.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode(employee.getAddress().getAddressLine1(),
 						employee.getAddress().getAddressLine2(), employee.getAddress().getCity(),
 						employee.getAddress().getState(), employee.getAddress().getZipCode())
-				.orNull();
+				.or(new Address(employee.getAddress()));
 
 		Department department = departmentRepository.findByDepartmentName(employee.getDepartment().getDepartmentName())
-				.orNull();
+				.or(new Department(employee.getDepartment().getDepartmentId(),
+						employee.getDepartment().getDepartmentName()));
 
 		Employee employee3 = repository.findByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())
-				.orNull();
+				.or(new Employee(employee, address, department));
 
-		if (address == null) {
-			address = new Address(employee.getAddress());
-		}
-
-		if (department == null) {
-			department = new Department(employee.getDepartment().getDepartmentId(),
-					employee.getDepartment().getDepartmentName());
-		}
-		
-		if (employee3 == null) {
-			employee2 = new Employee(employee, address, department);
-			returnEmployee = Optional.of(repository.save(employee2));
-		}
-		
-		return returnEmployee.orElse(employee3);
+		return repository.save(employee3);
 
 	}
-	
-	@Override
-	@Transactional
-	public Employee updateEmployee(EmployeeDto employee) {
 
-		Employee employee2 = null;
-		
-		Optional<Employee> returnEmployee = Optional.empty();
-
-		Address address = addressRepository
-				.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode(employee.getAddress().getAddressLine1(),
-						employee.getAddress().getAddressLine2(), employee.getAddress().getCity(),
-						employee.getAddress().getState(), employee.getAddress().getZipCode())
-				.orNull();
-
-		Department department = departmentRepository.findByDepartmentName(employee.getDepartment().getDepartmentName())
-				.orNull();
-
-		Employee employee3 = repository.findByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())
-				.orNull();
-
-		if (address == null) {
-			address = new Address(employee.getAddress());
-		}
-
-		if (department == null) {
-			department = new Department(employee.getDepartment().getDepartmentId(),
-					employee.getDepartment().getDepartmentName());
-		}
-		
-		if (employee3 != null) {
-			employee2 = new Employee(employee, address, department);
-			returnEmployee = Optional.of(repository.save(employee2));
-		}
-		
-		return returnEmployee.orElse(employee3);
-
-	}
-	
 	public void partialUpdateEmployee(EmployeeDto employeeDto) {
 		Employee employee = repository.findById(employeeDto.getEmployeeId()).orElse(null);
-		
-		if(employee!=null) {
+
+		if (employee != null) {
 			Employee employee2 = new Employee(employeeDto, employee.getAddress(), employee.getDepartment());
-			
-			
+
 			repository.save(employee2);
 		}
-		
+
 	}
 
 }

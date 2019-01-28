@@ -10,7 +10,7 @@ import com.kingshuk.springboot.springdatajpaproject.entities.Employee;
 
 public interface EmployeeManagementService {
 	
-	Employee addNewEmployee(EmployeeDto employee);
+	Employee addOrUpdateEmployee(EmployeeDto employee);
 	
 	Employee getEmployee(long employeeId);
 	
@@ -21,7 +21,5 @@ public interface EmployeeManagementService {
 	void deleteEmployee(long employeeId);
 	
 	void partialUpdateEmployee(EmployeeDto employeeDto);
-
-	Employee updateEmployee(EmployeeDto employee);
 
 }
