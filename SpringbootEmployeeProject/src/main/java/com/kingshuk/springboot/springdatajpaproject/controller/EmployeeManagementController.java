@@ -55,8 +55,12 @@ public class EmployeeManagementController {
 	@GetMapping(path = "/employees/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public Employee getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
-		if (LOGGER.isInfoEnabled()) {
+		/*if (LOGGER.isInfoEnabled()) {
 			LOGGER.info(String.format("Request for employee with employee id: %s", empId));
+		}*/
+		
+		if (LOGGER.isDebugEnabled()) {
+			LOGGER.debug(String.format("Request for employee with employee id: %s", empId));
 		}
 
 		return employeeManagementService.getEmployeeById(empId);
