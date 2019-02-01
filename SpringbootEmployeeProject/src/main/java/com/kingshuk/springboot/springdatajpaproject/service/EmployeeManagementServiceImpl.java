@@ -1,9 +1,6 @@
 package com.kingshuk.springboot.springdatajpaproject.service;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

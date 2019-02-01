@@ -30,6 +30,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.1.2.RELEASE'
+	
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -42,3 +45,14 @@ dependencies {
 	apt 'org.projectlombok:lombok:1.18.4'
 	
 }
+
+springBoot {
+    // This statement tells the Gradle Spring Boot plugin
+    // to generate a file
+    // build/resources/main/META-INF/build-info.properties
+    // that is picked up by Spring Boot to display
+    // via /info endpoint.
+    buildInfo()
+}
+
+
