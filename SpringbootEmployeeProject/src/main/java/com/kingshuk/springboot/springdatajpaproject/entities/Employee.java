@@ -34,6 +34,16 @@ public class Employee {
 
 	}
 	
+	
+	
+	public Employee(Department department, Address address) {
+		super();
+		this.department = department;
+		this.address = address;
+	}
+
+
+
 	public Employee(EmployeeDto employeeDto) {
 		this.firstName = employeeDto.getFirstName();
 		this.lastName = employeeDto.getLastName();

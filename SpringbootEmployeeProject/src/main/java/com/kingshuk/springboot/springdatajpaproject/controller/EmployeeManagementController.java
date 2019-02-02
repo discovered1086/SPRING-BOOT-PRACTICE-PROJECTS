@@ -1,7 +1,9 @@
 package com.kingshuk.springboot.springdatajpaproject.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.dozer.DozerBeanMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class EmployeeManagementController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeManagementController.class);
 
 	@Autowired
+	private DozerBeanMapper myBeanMapper;
+
+	@Autowired
 	private EmployeeManagementService employeeManagementService;
 
 	@GetMapping("/")
@@ -35,17 +40,21 @@ public class EmployeeManagementController {
 
 	@PostMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
-	public Employee createEmployee(@RequestBody EmployeeDto employee) {
+	public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employee) {
 
-		return employeeManagementService.addOrUpdateEmployee(employee);
+		Employee employee2 = myBeanMapper.map(employee, Employee.class);
+
+		return ResponseEntity.ok(myBeanMapper.map(employeeManagementService.addOrUpdateEmployee(employee2), EmployeeDto.class));
 
 	}
 
 	@GetMapping(path = "/employees", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
-	public ResponseEntity<List<Employee>> getAllEmployees() {
-		List<Employee> employeeList = employeeManagementService.getAllEmployees();
+	public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
+		List<EmployeeDto> employeeList = new ArrayList<>();
 
-		if (employeeList == null || employeeList.isEmpty()) {
+		myBeanMapper.map(employeeManagementService.getAllEmployees(), employeeList);
+
+		if (employeeList.isEmpty()) {
 			return ResponseEntity.noContent().build();
 		}
 
@@ -54,33 +63,43 @@ public class EmployeeManagementController {
 
 	@GetMapping(path = "/employees/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
-	public Employee getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
-		/*if (LOGGER.isInfoEnabled()) {
-			LOGGER.info(String.format("Request for employee with employee id: %s", empId));
-		}*/
-		
+	public ResponseEntity<EmployeeDto> getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
+		LOGGER.info(String.format("Request for employee with employee id: %s", empId));
+
 		if (LOGGER.isDebugEnabled()) {
 			LOGGER.debug(String.format("Request for employee with employee id: %s", empId));
 		}
 
-		return employeeManagementService.getEmployeeById(empId);
+		Employee employee = employeeManagementService.getEmployeeById(empId);
+
+		if (employee == null) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(myBeanMapper.map(employee, EmployeeDto.class));
+		}
 	}
 
 	@PutMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Employee updateEmployee(@RequestBody EmployeeDto employee) {
+	public ResponseEntity<EmployeeDto> updateEmployee(@RequestBody EmployeeDto employee) {
 
-		return employeeManagementService.addOrUpdateEmployee(employee);
+		Employee employee2 = myBeanMapper.map(employee, Employee.class);
+
+		return ResponseEntity.ok(myBeanMapper.map(employeeManagementService.addOrUpdateEmployee(employee2), EmployeeDto.class));
 
 	}
 
 	@PatchMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public void updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
+	public ResponseEntity<String> updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
 		employeeManagementService.partialUpdateEmployee(employeeDto);
+		
+		return ResponseEntity.ok().build();
 	}
 
 	@DeleteMapping(path = "/employees/{employeeId}")
-	public void deleteEmployee(@PathVariable("employeeId") Long empId) {
+	public ResponseEntity<String> deleteEmployee(@PathVariable("employeeId") Long empId) {
 		employeeManagementService.deleteEmployee(empId);
+		
+		return ResponseEntity.ok().build();
 	}
 
 }

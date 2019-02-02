@@ -2,6 +2,7 @@ package com.kingshuk.springboot.springdatajpaproject.service;
 
 import java.util.List;
 
+import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +17,9 @@ import com.kingshuk.springboot.springdatajpaproject.repos.EmployeeManagementRepo
 
 @Service
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
+	
+	@Autowired
+	private DozerBeanMapper myBeanMapper;
 
 	@Autowired
 	private EmployeeManagementRepository repository;
@@ -48,20 +52,20 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
 	@Override
 	@Transactional
-	public Employee addOrUpdateEmployee(EmployeeDto employee) {
+	public Employee addOrUpdateEmployee(Employee employee) {
 
 		Address address = addressRepository
 				.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode(employee.getAddress().getAddressLine1(),
 						employee.getAddress().getAddressLine2(), employee.getAddress().getCity(),
 						employee.getAddress().getState(), employee.getAddress().getZipCode())
-				.or(new Address(employee.getAddress()));
+				.or(employee.getAddress());
 
 		Department department = departmentRepository.findByDepartmentName(employee.getDepartment().getDepartmentName())
 				.or(new Department(employee.getDepartment().getDepartmentId(),
 						employee.getDepartment().getDepartmentName()));
 
 		Employee employee3 = repository.findByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())
-				.or(new Employee(employee, address, department));
+				.or(new Employee(department, address));
 
 		return repository.save(employee3);
 
