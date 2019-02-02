@@ -6,3 +6,208 @@
 2019-02-02 11:31:43.314  INFO 997 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
 2019-02-02 11:31:43.359  INFO 997 --- [main] pringbootEmployeeProjectApplicationTests : Started SpringbootEmployeeProjectApplicationTests in 3.45 seconds (JVM running for 6.156)
 2019-02-02 11:31:43.766  INFO 997 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-02 12:05:14.512  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 1058 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-02 12:05:14.516  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-02 12:05:14.552  INFO 1058 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-02 12:05:14.552  INFO 1058 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-02 12:05:15.769  INFO 1058 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-02 12:05:15.855  INFO 1058 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 3 repository interfaces.
+2019-02-02 12:05:16.309  INFO 1058 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$533b855e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-02 12:05:16.341  INFO 1058 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-02 12:05:16.393  INFO 1058 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aea3c05f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-02 12:05:16.905  INFO 1058 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-02 12:05:16.941  INFO 1058 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-02 12:05:16.941  INFO 1058 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-02 12:05:16.952  INFO 1058 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/kingshuksmacbookpro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-02 12:05:17.114  INFO 1058 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-02 12:05:17.114  INFO 1058 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2562 ms
+2019-02-02 12:05:17.736  INFO 1058 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-02 12:05:18.052  INFO 1058 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-02 12:05:18.103  INFO 1058 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-02 12:05:18.195  INFO 1058 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-02 12:05:18.197  INFO 1058 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-02 12:05:18.338  INFO 1058 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-02 12:05:18.483  INFO 1058 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-02 12:05:19.297  INFO 1058 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-02 12:05:19.349  INFO 1058 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-02 12:05:19.364  INFO 1058 --- [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2019-02-02 12:05:19.370  WARN 1058 --- [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2019-02-02 12:05:19.372  INFO 1058 --- [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2019-02-02 12:05:19.376  INFO 1058 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2019-02-02 12:05:19.377  INFO 1058 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2019-02-02 12:05:19.378  INFO 1058 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-02 12:05:19.981  WARN 1058 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-02 12:05:20.402  INFO 1058 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-02 12:05:20.488  INFO 1058 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-02 12:05:20.660  INFO 1058 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-02 12:05:20.953  INFO 1058 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 934db2a6-db9e-434f-9d8d-14c9e4c789f0
+
+2019-02-02 12:05:21.049  INFO 1058 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1baf9a24, org.springframework.security.web.context.SecurityContextPersistenceFilter@676e7594, org.springframework.security.web.header.HeaderWriterFilter@1a3d4b01, org.springframework.security.web.csrf.CsrfFilter@5f2ab5fc, org.springframework.security.web.authentication.logout.LogoutFilter@52b6a51, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1f293ada, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2088f80b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6fc7cd17, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@13fa2d8f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30e93aa0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39e75c5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f149211, org.springframework.security.web.session.SessionManagementFilter@1b51fe57, org.springframework.security.web.access.ExceptionTranslationFilter@7d8ff4ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6906d038]
+2019-02-02 12:05:21.185  INFO 1058 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-02 12:05:21.205  INFO 1058 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-02 12:05:21.239  INFO 1058 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-02 12:05:21.416  INFO 1058 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-02 12:05:21.420  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 7.318 seconds (JVM running for 8.373)
+2019-02-02 12:05:47.044  INFO 1058 --- [http-nio-9090-exec-2] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-02 12:05:47.044  INFO 1058 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-02 12:05:47.055  INFO 1058 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-02-02 12:13:00.512  INFO 1058 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-02 12:13:00.517  INFO 1058 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-02 12:13:00.523  INFO 1058 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-02 12:13:00.539  INFO 1058 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-02 12:13:00.891  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 1058 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-02 12:13:00.892  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-02 12:13:01.637 ERROR 1058 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:528) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at com.kingshuk.springboot.springdatajpaproject.SpringbootEmployeeProjectApplication.main(SpringbootEmployeeProjectApplication.java:11) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.kingshuk.springboot.springdatajpaproject.config.MyCustomConfiguration] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2187fcab]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_152]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:721) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:662) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:630) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[na:1.8.0_152]
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: DozerBeanMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_152]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_152]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_152]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: DozerBeanMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_152]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_152]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_152]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_152]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:148) ~[spring-boot-devtools-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_152]
+	... 48 common frames omitted
+
+2019-02-02 12:13:01.642  WARN 1058 --- [restartedMain] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [com.kingshuk.springboot.springdatajpaproject.config.MyCustomConfiguration] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2187fcab]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_152]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:721) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:662) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:630) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1204) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at com.kingshuk.springboot.springdatajpaproject.SpringbootEmployeeProjectApplication.main(SpringbootEmployeeProjectApplication.java:11) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+Caused by: java.lang.NoClassDefFoundError: DozerBeanMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_152]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_152]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_152]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: DozerBeanMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_152]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_152]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_152]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_152]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:148) ~[spring-boot-devtools-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_152]
+	... 30 common frames omitted
+
+2019-02-02 12:16:32.009  INFO 1058 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-02 12:16:32.010  INFO 1058 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-02 12:16:32.019  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 1058 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-02 12:16:32.020  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-02 12:16:32.597  INFO 1058 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-02 12:16:32.613  INFO 1058 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 3 repository interfaces.
+2019-02-02 12:16:32.713  INFO 1058 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$533b855e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-02 12:16:32.716  INFO 1058 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-02 12:16:32.733  INFO 1058 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aea3c05f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-02 12:16:32.876  INFO 1058 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-02 12:16:32.878  INFO 1058 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-02 12:16:32.879  INFO 1058 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-02 12:16:32.889  INFO 1058 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-02 12:16:32.890  INFO 1058 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 868 ms
+2019-02-02 12:16:33.222  INFO 1058 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-02-02 12:16:33.236  INFO 1058 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-02-02 12:16:33.247  INFO 1058 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-02 12:16:33.257  INFO 1058 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-02 12:16:33.457  INFO 1058 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-02 12:16:33.477  INFO 1058 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-02 12:16:33.483  INFO 1058 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-02 12:16:33.635  WARN 1058 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-02 12:16:33.723  INFO 1058 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-02 12:16:33.767  INFO 1058 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-02 12:16:33.829  INFO 1058 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-02 12:16:33.952  INFO 1058 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 27643945-a494-4980-ad38-9348abb1c6a3
+
+2019-02-02 12:16:33.966  INFO 1058 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2634f46f, org.springframework.security.web.context.SecurityContextPersistenceFilter@438990c3, org.springframework.security.web.header.HeaderWriterFilter@7c01fe62, org.springframework.security.web.csrf.CsrfFilter@507391d3, org.springframework.security.web.authentication.logout.LogoutFilter@1fdcd8f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@56b1fc1f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@10dc5da2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@74d51a03, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5bbe1d74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f864da5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c8744d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ddd5182, org.springframework.security.web.session.SessionManagementFilter@fb875ee, org.springframework.security.web.access.ExceptionTranslationFilter@7d123e21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@303c51e3]
+2019-02-02 12:16:34.036  INFO 1058 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-02 12:16:34.037  INFO 1058 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-02 12:16:34.048  INFO 1058 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-02 12:16:34.090  INFO 1058 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-02 12:16:34.091  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 2.104 seconds (JVM running for 681.033)
+2019-02-02 12:16:34.096  INFO 1058 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-02 14:24:45.303  WARN 1058 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=34m11s338ms).
