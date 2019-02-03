@@ -211,6 +211,9 @@ Using generated security password: 27643945-a494-4980-ad38-9348abb1c6a3
 2019-02-02 12:16:34.091  INFO 1058 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 2.104 seconds (JVM running for 681.033)
 2019-02-02 12:16:34.096  INFO 1058 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 <<<<<<< HEAD
+<<<<<<< HEAD
 2019-02-02 14:24:45.303  WARN 1058 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=34m11s338ms).
+=======
+>>>>>>> branch 'master' of https://github.com/rishi2616/SPRING-BOOT-PRACTICE-PROJECTS.git
 =======
 >>>>>>> branch 'master' of https://github.com/rishi2616/SPRING-BOOT-PRACTICE-PROJECTS.git
