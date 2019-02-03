@@ -17,7 +17,7 @@ import com.kingshuk.springboot.springdatajpaproject.repos.EmployeeManagementRepo
 
 @Service
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
-	
+
 	@Autowired
 	private DozerBeanMapper myBeanMapper;
 
@@ -53,21 +53,61 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 	@Override
 	@Transactional
 	public Employee addOrUpdateEmployee(Employee employee) {
+		
+		Employee employee2 = repository.findByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())
+				.orElseGet(()-> {
+					Employee employee3 = repository.findById(employee.getEmployeeId()).orElse(null);
+					
+					if(employee3!=null) {
+						employee3.setFirstName(employee.getFirstName());
+						employee3.setLastName(employee.getLastName());
+					}else {
+						employee3 = new Employee(employee.getFirstName(), employee.getLastName());
+					}
+					
+					return employee3;
+				});
+						
 
-		Address address = addressRepository
-				.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode(employee.getAddress().getAddressLine1(),
-						employee.getAddress().getAddressLine2(), employee.getAddress().getCity(),
-						employee.getAddress().getState(), employee.getAddress().getZipCode())
-				.or(employee.getAddress());
+		
+		/*
+		 * First I'm searching for the address in the database
+		 * If I find it, then I have to see if this address belongs to the employee I found or created.
+		 * If it doesn't then I set the address to this employee
+		 */
+		if(employee.getAddress()!=null) {
+			Address address = addressRepository.findByAddressLine1AndAddressLine2AndCityAndStateAndZipCode
+					(employee.getAddress().getAddressLine1(), 
+					 employee.getAddress().getAddressLine2(), 
+					 employee.getAddress().getCity(), 
+					 employee.getAddress().getState(), 
+					 employee.getAddress().getZipCode()).orElse(null);	
+			
+			if(address==null) {
+				address = employee.getAddress();
+			}
+			
+			employee2.setAddress(address);
+		}
+		
+		
+		/*
+		 * Same logic for department
+		 */
+		if(employee.getDepartment()!=null) {
+			Department department = departmentRepository.findByDepartmentName(employee.getDepartment().getDepartmentName())
+									.orElse(null);
+			
+			if(department == null) {
+				department = employee.getDepartment();
+			}
+			
+			employee2.setDepartment(department);
+		}
+		
+		
 
-		Department department = departmentRepository.findByDepartmentName(employee.getDepartment().getDepartmentName())
-				.or(new Department(employee.getDepartment().getDepartmentId(),
-						employee.getDepartment().getDepartmentName()));
-
-		Employee employee3 = repository.findByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())
-				.or(new Employee(department, address));
-
-		return repository.save(employee3);
+		return repository.save(employee2);
 
 	}
 

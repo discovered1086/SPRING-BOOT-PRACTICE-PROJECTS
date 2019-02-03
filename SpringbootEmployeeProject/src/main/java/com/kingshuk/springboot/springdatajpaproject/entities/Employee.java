@@ -11,15 +11,25 @@ import javax.persistence.OneToOne;
 
 import com.kingshuk.springboot.springdatajpaproject.dto.EmployeeDto;
 
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
+@RequiredArgsConstructor
 public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long employeeId;
 
+	@NonNull
 	private String firstName;
 
+	@NonNull
 	private String lastName;
 
 	@ManyToOne(cascade = { CascadeType.PERSIST})
@@ -37,9 +47,15 @@ public class Employee {
 	
 	
 	public Employee(Department department, Address address) {
-		super();
 		this.department = department;
 		this.address = address;
+	}
+	
+	public Employee(String firstName, String lastName, Department department, Address address) {
+		this.department = department;
+		this.address = address;
+		this.firstName = firstName;
+		this.lastName= lastName;
 	}
 
 
@@ -58,45 +74,7 @@ public class Employee {
 		this.department = department;
 	}
 
-	public long getEmployeeId() {
-		return employeeId;
-	}
-
-	public void setEmployeeId(long employeeId) {
-		this.employeeId = employeeId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Department getDepartment() {
-		return department;
-	}
-
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
+	
 
 	@Override
 	public String toString() {
