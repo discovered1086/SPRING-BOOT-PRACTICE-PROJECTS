@@ -1,0 +1,14 @@
+management:
+  security:
+    enabled: false
+
+---
+spring:
+  profiles: dev
+server:
+  port: 7500
+---
+spring:
+  profiles: test
+server:
+  port: 8000
