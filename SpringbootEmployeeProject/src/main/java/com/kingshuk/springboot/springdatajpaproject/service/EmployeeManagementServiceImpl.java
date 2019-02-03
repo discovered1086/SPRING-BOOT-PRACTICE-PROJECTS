@@ -42,7 +42,7 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
 	@Override
 	public Employee getEmployeeById(long employeeId) {
-		return repository.findById(employeeId).orElseThrow(null);
+		return repository.findById(employeeId).orElse(null);
 	}
 
 	@Override

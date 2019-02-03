@@ -25,7 +25,7 @@ import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementSe
 @RestController
 public class EmployeeManagementController {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeManagementController.class);
+	
 
 	@Autowired
 	private DozerBeanMapper myBeanMapper;
@@ -64,12 +64,7 @@ public class EmployeeManagementController {
 	@GetMapping(path = "/employees/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<EmployeeDto> getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
-		LOGGER.info(String.format("Request for employee with employee id: %s", empId));
-
-		if (LOGGER.isDebugEnabled()) {
-			LOGGER.debug(String.format("Request for employee with employee id: %s", empId));
-		}
-
+		
 		Employee employee = employeeManagementService.getEmployeeById(empId);
 
 		if (employee == null) {

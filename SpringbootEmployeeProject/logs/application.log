@@ -220,3 +220,544 @@ Using generated security password: 27643945-a494-4980-ad38-9348abb1c6a3
 >>>>>>> branch 'master' of https://github.com/rishi2616/SPRING-BOOT-PRACTICE-PROJECTS.git
 =======
 >>>>>>> branch 'master' of https://github.com/rishi2616/SPRING-BOOT-PRACTICE-PROJECTS.git
+2019-02-03 11:43:06.314  INFO 802 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 802 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 11:43:06.316  INFO 802 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 11:43:06.359  INFO 802 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-03 11:43:06.359  INFO 802 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-03 11:43:07.583  INFO 802 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 11:43:07.659  INFO 802 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 3 repository interfaces.
+2019-02-03 11:43:08.035  INFO 802 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$63dd0dab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:43:08.070  INFO 802 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 11:43:08.122  INFO 802 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf4548ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:43:08.535  INFO 802 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 11:43:08.565  INFO 802 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 11:43:08.566  INFO 802 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 11:43:08.575  INFO 802 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/kingshuksmacbookpro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-03 11:43:08.769  INFO 802 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 11:43:08.770  INFO 802 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2411 ms
+2019-02-03 11:43:09.337  INFO 802 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-03 11:43:09.838  INFO 802 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-03 11:43:09.892  INFO 802 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 11:43:09.988  INFO 802 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-03 11:43:09.990  INFO 802 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-03 11:43:10.143  INFO 802 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-03 11:43:10.315  INFO 802 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 11:43:11.150  INFO 802 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:43:11.203  INFO 802 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 11:43:11.220  INFO 802 --- [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2019-02-03 11:43:11.225  WARN 802 --- [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2019-02-03 11:43:11.226  INFO 802 --- [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2019-02-03 11:43:11.228  INFO 802 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2019-02-03 11:43:11.229  INFO 802 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2019-02-03 11:43:11.230  INFO 802 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 11:43:11.885  WARN 802 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 11:43:12.196  INFO 802 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 11:43:12.290  INFO 802 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 11:43:12.468  INFO 802 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:43:12.747  INFO 802 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6ea1f6b3-2adc-4997-9962-048764333667
+
+2019-02-03 11:43:12.847  INFO 802 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66a587d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@545cfe23, org.springframework.security.web.header.HeaderWriterFilter@203ddabe, org.springframework.security.web.csrf.CsrfFilter@20119b84, org.springframework.security.web.authentication.logout.LogoutFilter@42b121f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19fb4102, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@264ae05b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7716df9d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@30e93aa0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eb7e46d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e134221, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37bede9f, org.springframework.security.web.session.SessionManagementFilter@74ecdd88, org.springframework.security.web.access.ExceptionTranslationFilter@260da496, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18c8cbbb]
+2019-02-03 11:43:12.984  INFO 802 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 11:43:13.008  INFO 802 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 11:43:13.044  INFO 802 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 11:43:13.220  INFO 802 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 11:43:13.223  INFO 802 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 7.232 seconds (JVM running for 8.02)
+2019-02-03 11:43:15.385  INFO 802 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-03 11:43:15.392  INFO 802 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:43:15.395  INFO 802 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:43:15.399  INFO 802 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-03 11:43:15.409  INFO 802 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-03 11:55:01.437  INFO 819 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 819 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 11:55:01.439  INFO 819 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 11:55:01.471  INFO 819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-03 11:55:01.471  INFO 819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-03 11:55:02.437  INFO 819 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 11:55:02.505  INFO 819 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 3 repository interfaces.
+2019-02-03 11:55:02.810  INFO 819 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2da66fa1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:55:02.837  INFO 819 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 11:55:02.875  INFO 819 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$890eaaa2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:55:03.205  INFO 819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 11:55:03.227  INFO 819 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 11:55:03.228  INFO 819 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 11:55:03.235  INFO 819 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/kingshuksmacbookpro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-03 11:55:03.349  INFO 819 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 11:55:03.350  INFO 819 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1879 ms
+2019-02-03 11:55:03.888  INFO 819 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-03 11:55:04.161  INFO 819 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-03 11:55:04.200  INFO 819 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 11:55:04.251  INFO 819 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-03 11:55:04.252  INFO 819 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-03 11:55:04.373  INFO 819 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-03 11:55:04.481  INFO 819 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 11:55:05.118  INFO 819 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:55:05.164  INFO 819 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 11:55:05.180  INFO 819 --- [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2019-02-03 11:55:05.187  WARN 819 --- [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2019-02-03 11:55:05.189  INFO 819 --- [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2019-02-03 11:55:05.191  INFO 819 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2019-02-03 11:55:05.192  INFO 819 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2019-02-03 11:55:05.193  INFO 819 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 11:55:05.770  WARN 819 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 11:55:06.137  INFO 819 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 11:55:06.214  INFO 819 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 11:55:06.383  INFO 819 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:55:06.682  INFO 819 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 11:55:06.696  INFO 819 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 11:55:06.727  INFO 819 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 11:55:06.889  INFO 819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 11:55:06.892  INFO 819 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 5.715 seconds (JVM running for 6.615)
+2019-02-03 11:55:15.952  INFO 819 --- [http-nio-9090-exec-1] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-03 11:55:15.953  INFO 819 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-03 11:55:15.962  INFO 819 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-02-03 11:55:16.004  INFO 819 --- [http-nio-9090-exec-1] c.k.s.s.c.EmployeeManagementController   : Request for employee with employee id: 14
+2019-02-03 11:55:16.073 ERROR 819 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/SpringBootEmployeeProject] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at java.util.Optional.orElseThrow(Optional.java:290) ~[na:1.8.0_152]
+	at com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementServiceImpl.getEmployeeById(EmployeeManagementServiceImpl.java:45) ~[main/:na]
+	at com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementServiceImpl$$FastClassBySpringCGLIB$$55631462.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684) ~[spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementServiceImpl$$EnhancerBySpringCGLIB$$d227c4aa.getEmployeeById(<generated>) ~[main/:na]
+	at com.kingshuk.springboot.springdatajpaproject.controller.EmployeeManagementController.getEmployeeByEmployeeId(EmployeeManagementController.java:73) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90) ~[spring-boot-actuator-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117) ~[spring-boot-actuator-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106) ~[spring-boot-actuator-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_152]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_152]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_152]
+
+2019-02-03 11:57:29.229  INFO 819 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:57:29.232  INFO 819 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:57:29.236  INFO 819 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-03 11:57:29.243  INFO 819 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-03 11:57:29.481  INFO 819 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 819 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 11:57:29.481  INFO 819 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 11:57:30.093  INFO 819 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 11:57:30.111  INFO 819 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 3 repository interfaces.
+2019-02-03 11:57:30.189  INFO 819 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2da66fa1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:57:30.191  INFO 819 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 11:57:30.205  INFO 819 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$890eaaa2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:57:30.303  INFO 819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 11:57:30.306  INFO 819 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 11:57:30.306  INFO 819 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 11:57:30.316  INFO 819 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 11:57:30.316  INFO 819 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 832 ms
+2019-02-03 11:57:30.571  INFO 819 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-02-03 11:57:30.581  INFO 819 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-02-03 11:57:30.589  INFO 819 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 11:57:30.597  INFO 819 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 11:57:30.760  INFO 819 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:57:30.783  INFO 819 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 11:57:30.788  INFO 819 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 11:57:30.958  WARN 819 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 11:57:31.038  INFO 819 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 11:57:31.081  INFO 819 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 11:57:31.147  INFO 819 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:57:31.304  INFO 819 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 11:57:31.306  INFO 819 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 11:57:31.316  INFO 819 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 11:57:31.366  INFO 819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 11:57:31.367  INFO 819 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 1.914 seconds (JVM running for 151.081)
+2019-02-03 11:57:31.372  INFO 819 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-03 11:57:32.142  INFO 819 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-03 11:57:32.146  INFO 819 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:57:32.147  INFO 819 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:57:32.147  INFO 819 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-02-03 11:57:32.156  INFO 819 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-02-03 11:57:39.687  INFO 820 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 820 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 11:57:39.689  INFO 820 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 11:57:39.728  INFO 820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-03 11:57:39.728  INFO 820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-03 11:57:40.670  INFO 820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 11:57:40.738  INFO 820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 3 repository interfaces.
+2019-02-03 11:57:41.072  INFO 820 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c926473a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:57:41.104  INFO 820 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 11:57:41.150  INFO 820 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$248e823b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 11:57:41.478  INFO 820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 11:57:41.500  INFO 820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 11:57:41.501  INFO 820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 11:57:41.508  INFO 820 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/kingshuksmacbookpro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-03 11:57:41.629  INFO 820 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 11:57:41.630  INFO 820 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1902 ms
+2019-02-03 11:57:42.139  INFO 820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-03 11:57:42.420  INFO 820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-03 11:57:42.462  INFO 820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 11:57:42.512  INFO 820 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-03 11:57:42.513  INFO 820 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-03 11:57:42.640  INFO 820 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-03 11:57:42.747  INFO 820 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 11:57:43.413  INFO 820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 11:57:43.466  INFO 820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 11:57:43.482  INFO 820 --- [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2019-02-03 11:57:43.487  WARN 820 --- [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2019-02-03 11:57:43.488  INFO 820 --- [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2019-02-03 11:57:43.490  INFO 820 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2019-02-03 11:57:43.491  INFO 820 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2019-02-03 11:57:43.491  INFO 820 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 11:57:44.086  WARN 820 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 11:57:44.423  INFO 820 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 11:57:44.504  INFO 820 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 11:57:44.678  INFO 820 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 11:57:44.973  INFO 820 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 11:57:44.985  INFO 820 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 11:57:45.014  INFO 820 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 11:57:45.186  INFO 820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 11:57:45.189  INFO 820 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 5.778 seconds (JVM running for 6.349)
+2019-02-03 12:01:39.173  INFO 820 --- [http-nio-9090-exec-2] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-03 12:01:39.174  INFO 820 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-03 12:01:39.186  INFO 820 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-02-03 12:01:39.231  INFO 820 --- [http-nio-9090-exec-2] c.k.s.s.c.EmployeeManagementController   : Request for employee with employee id: 14
+2019-02-03 12:02:24.205  INFO 820 --- [http-nio-9090-exec-3] c.k.s.s.c.EmployeeManagementController   : Request for employee with employee id: 12
+2019-02-03 12:03:12.480  INFO 820 --- [http-nio-9090-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-02-03 12:10:08.701  INFO 820 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:10:08.705  INFO 820 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:10:08.708  INFO 820 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-03 12:10:08.715  INFO 820 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-03 12:10:09.023  INFO 820 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 820 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:10:09.024  INFO 820 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:10:09.534  INFO 820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:10:09.549  INFO 820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 3 repository interfaces.
+2019-02-03 12:10:09.633  INFO 820 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c926473a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:10:09.635  INFO 820 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:10:09.650  INFO 820 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$248e823b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:10:09.744  INFO 820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:10:09.747  INFO 820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:10:09.748  INFO 820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:10:09.757  INFO 820 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:10:09.757  INFO 820 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 731 ms
+2019-02-03 12:10:10.014  INFO 820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-02-03 12:10:10.025  INFO 820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-02-03 12:10:10.032  INFO 820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:10:10.040  INFO 820 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:10:10.173  INFO 820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:10:10.198  INFO 820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:10:10.204  INFO 820 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:10:10.376  WARN 820 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:10:10.463  INFO 820 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:10:10.510  INFO 820 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:10:10.578  INFO 820 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:10:10.736  INFO 820 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:10:10.737  INFO 820 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:10:10.747  INFO 820 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:10:10.787  INFO 820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:10:10.787  INFO 820 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 1.797 seconds (JVM running for 751.943)
+2019-02-03 12:10:10.793  INFO 820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-03 12:10:13.895  INFO 820 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-03 12:10:13.900  INFO 820 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:10:13.902  INFO 820 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:10:13.903  INFO 820 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-02-03 12:10:13.910  INFO 820 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-02-03 12:23:59.298  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 882 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:23:59.300  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:23:59.331  INFO 882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-03 12:23:59.331  INFO 882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-03 12:24:00.294  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:24:00.360  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 3 repository interfaces.
+2019-02-03 12:24:00.681  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f22c245] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:24:00.712  INFO 882 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:24:00.781  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a8afd46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:24:01.166  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:24:01.189  INFO 882 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:24:01.190  INFO 882 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:24:01.196  INFO 882 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/kingshuksmacbookpro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-03 12:24:01.459  INFO 882 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:24:01.459  INFO 882 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2128 ms
+2019-02-03 12:24:01.923  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-03 12:24:02.386  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-03 12:24:02.429  INFO 882 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:24:02.477  INFO 882 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-03 12:24:02.478  INFO 882 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-03 12:24:02.598  INFO 882 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-03 12:24:02.704  INFO 882 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:24:03.389  INFO 882 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:24:03.430  INFO 882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:24:03.444  INFO 882 --- [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2019-02-03 12:24:03.448  WARN 882 --- [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2019-02-03 12:24:03.449  INFO 882 --- [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2019-02-03 12:24:03.453  INFO 882 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2019-02-03 12:24:03.453  INFO 882 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2019-02-03 12:24:03.454  INFO 882 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:24:04.117  WARN 882 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:24:04.259  INFO 882 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:24:04.338  INFO 882 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:24:04.513  INFO 882 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:24:04.816  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:24:04.830  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:24:04.860  INFO 882 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:24:05.019  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:24:05.021  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 5.988 seconds (JVM running for 13.333)
+2019-02-03 12:24:15.983  INFO 882 --- [http-nio-9090-exec-1] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-03 12:24:15.983  INFO 882 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-03 12:24:15.995  INFO 882 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-02-03 12:24:16.037  INFO 882 --- [http-nio-9090-exec-1] c.k.s.s.c.EmployeeManagementController   : Request for employee with employee id: 12
+2019-02-03 12:24:35.474  INFO 882 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:24:35.477  INFO 882 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:24:35.479  INFO 882 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-03 12:24:35.484  INFO 882 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-03 12:24:35.777  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 882 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:24:35.777  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:24:36.252  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:24:36.266  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 3 repository interfaces.
+2019-02-03 12:24:36.320  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f22c245] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:24:36.322  INFO 882 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:24:36.336  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a8afd46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:24:36.434  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:24:36.437  INFO 882 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:24:36.438  INFO 882 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:24:36.447  INFO 882 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:24:36.447  INFO 882 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 666 ms
+2019-02-03 12:24:36.698  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-02-03 12:24:36.707  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-02-03 12:24:36.714  INFO 882 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:24:36.721  INFO 882 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:24:36.852  INFO 882 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:24:36.880  INFO 882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:24:36.887  INFO 882 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:24:37.095  WARN 882 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:24:37.191  INFO 882 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:24:37.248  INFO 882 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:24:37.331  INFO 882 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:24:37.532  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:24:37.533  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:24:37.545  INFO 882 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:24:37.589  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:24:37.589  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 1.846 seconds (JVM running for 45.9)
+2019-02-03 12:24:37.595  INFO 882 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-03 12:24:39.932  INFO 882 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:24:39.934  INFO 882 --- [Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:24:39.936  INFO 882 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-02-03 12:24:39.945  INFO 882 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-02-03 12:24:40.241  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 882 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:24:40.241  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:24:40.613  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:24:40.625  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 3 repository interfaces.
+2019-02-03 12:24:40.672  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f22c245] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:24:40.673  INFO 882 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:24:40.688  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a8afd46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:24:40.781  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:24:40.782  INFO 882 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:24:40.782  INFO 882 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:24:40.790  INFO 882 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:24:40.790  INFO 882 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 547 ms
+2019-02-03 12:24:41.027  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-02-03 12:24:41.034  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-02-03 12:24:41.041  INFO 882 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:24:41.048  INFO 882 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:24:41.238  INFO 882 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:24:41.260  INFO 882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:24:41.266  INFO 882 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:24:41.441  WARN 882 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:24:41.525  INFO 882 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:24:41.576  INFO 882 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:24:41.649  INFO 882 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:24:41.812  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:24:41.814  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:24:41.823  INFO 882 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:24:41.865  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:24:41.865  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 1.646 seconds (JVM running for 50.176)
+2019-02-03 12:24:41.870  INFO 882 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-03 12:24:46.366  INFO 882 --- [http-nio-9090-exec-2] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-03 12:24:46.367  INFO 882 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-03 12:24:46.377  INFO 882 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-02-03 12:24:46.384  INFO 882 --- [http-nio-9090-exec-2] c.k.s.s.a.EmployeeControllerAspects      : Request for employee with employee id: 12
+2019-02-03 12:27:14.589  INFO 882 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:27:14.591  INFO 882 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:27:14.592  INFO 882 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-02-03 12:27:14.599  INFO 882 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-02-03 12:27:14.904  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 882 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:27:14.904  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:27:15.306  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:27:15.317  INFO 882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 3 repository interfaces.
+2019-02-03 12:27:15.363  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f22c245] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:27:15.364  INFO 882 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:27:15.378  INFO 882 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6a8afd46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:27:15.470  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:27:15.471  INFO 882 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:27:15.472  INFO 882 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:27:15.479  INFO 882 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:27:15.479  INFO 882 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 573 ms
+2019-02-03 12:27:15.726  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-02-03 12:27:15.734  INFO 882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-02-03 12:27:15.741  INFO 882 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:27:15.748  INFO 882 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:27:15.886  INFO 882 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:27:15.910  INFO 882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:27:15.916  INFO 882 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:27:16.096  WARN 882 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:27:16.174  INFO 882 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:27:16.220  INFO 882 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:27:16.295  INFO 882 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:27:16.469  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:27:16.471  INFO 882 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:27:16.479  INFO 882 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:27:16.516  INFO 882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:27:16.517  INFO 882 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 1.636 seconds (JVM running for 204.826)
+2019-02-03 12:27:16.521  INFO 882 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-03 12:27:17.611  INFO 882 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-03 12:27:17.614  INFO 882 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:27:17.615  INFO 882 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:27:17.616  INFO 882 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-02-03 12:27:17.624  INFO 882 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-02-03 12:29:21.520  INFO 885 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 885 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:29:21.522  INFO 885 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:29:21.554  INFO 885 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-02-03 12:29:21.554  INFO 885 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-02-03 12:29:22.512  INFO 885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:29:22.570  INFO 885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 3 repository interfaces.
+2019-02-03 12:29:22.958  INFO 885 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4c5bccb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:29:22.984  INFO 885 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:29:23.039  INFO 885 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a7c407b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:29:23.429  INFO 885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:29:23.449  INFO 885 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:29:23.450  INFO 885 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:29:23.456  INFO 885 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/kingshuksmacbookpro/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-02-03 12:29:23.610  INFO 885 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:29:23.610  INFO 885 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2056 ms
+2019-02-03 12:29:24.074  INFO 885 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-03 12:29:24.333  INFO 885 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-03 12:29:24.374  INFO 885 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:29:24.423  INFO 885 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-03 12:29:24.424  INFO 885 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-03 12:29:24.543  INFO 885 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-03 12:29:24.648  INFO 885 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:29:25.340  INFO 885 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:29:25.385  INFO 885 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:29:25.403  INFO 885 --- [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2019-02-03 12:29:25.408  WARN 885 --- [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2019-02-03 12:29:25.410  INFO 885 --- [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2019-02-03 12:29:25.412  INFO 885 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2019-02-03 12:29:25.412  INFO 885 --- [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2019-02-03 12:29:25.413  INFO 885 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:29:26.048  WARN 885 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:29:26.189  INFO 885 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:29:26.266  INFO 885 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:29:26.432  INFO 885 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:29:26.742  INFO 885 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:29:26.756  INFO 885 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:29:26.787  INFO 885 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:29:26.946  INFO 885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:29:26.949  INFO 885 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 5.692 seconds (JVM running for 6.214)
+2019-02-03 12:29:51.985  INFO 885 --- [http-nio-9090-exec-2] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-03 12:29:51.985  INFO 885 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-03 12:29:51.998  INFO 885 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-02-03 12:29:52.044  INFO 885 --- [http-nio-9090-exec-2] c.k.s.s.a.EmployeeControllerAspects      : Request for deleting the employee with employee id: 12
+2019-02-03 12:30:37.726  INFO 885 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:30:37.728  INFO 885 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:30:37.731  INFO 885 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-03 12:30:37.736  INFO 885 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-03 12:30:37.978  INFO 885 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Starting SpringbootEmployeeProjectApplication on Kingshuks-MacBook-Pro.local with PID 885 (/Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/bin/main started by kingshuksmacbookpro in /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject)
+2019-02-03 12:30:37.978  INFO 885 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : The following profiles are active: test
+2019-02-03 12:30:38.405  INFO 885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:30:38.419  INFO 885 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 3 repository interfaces.
+2019-02-03 12:30:38.480  INFO 885 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4c5bccb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:30:38.482  INFO 885 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-02-03 12:30:38.495  INFO 885 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a7c407b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:30:38.590  INFO 885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2019-02-03 12:30:38.593  INFO 885 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:30:38.594  INFO 885 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:30:38.602  INFO 885 --- [restartedMain] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:30:38.603  INFO 885 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 623 ms
+2019-02-03 12:30:38.836  INFO 885 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-02-03 12:30:38.845  INFO 885 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-02-03 12:30:38.852  INFO 885 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:30:38.859  INFO 885 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-02-03 12:30:38.974  INFO 885 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:30:39.001  INFO 885 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-03 12:30:39.008  INFO 885 --- [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2019-02-03 12:30:39.205  WARN 885 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:30:39.289  INFO 885 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2019-02-03 12:30:39.337  INFO 885 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-03 12:30:39.419  INFO 885 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:30:39.631  INFO 885 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-03 12:30:39.633  INFO 885 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-03 12:30:39.644  INFO 885 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-03 12:30:39.711  INFO 885 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path '/SpringBootEmployeeProject'
+2019-02-03 12:30:39.712  INFO 885 --- [restartedMain] s.s.SpringbootEmployeeProjectApplication : Started SpringbootEmployeeProjectApplication in 1.761 seconds (JVM running for 78.974)
+2019-02-03 12:30:39.716  INFO 885 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-03 12:30:40.671  INFO 885 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-03 12:30:40.674  INFO 885 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:30:40.675  INFO 885 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:30:40.676  INFO 885 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-02-03 12:30:40.685  INFO 885 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
