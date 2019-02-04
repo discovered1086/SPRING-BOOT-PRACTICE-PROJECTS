@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kingshuk.springboot.springdatajpaproject.dto.EmployeeDto;
@@ -23,6 +24,7 @@ import com.kingshuk.springboot.springdatajpaproject.entities.Employee;
 import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementService;
 
 @RestController
+@RequestMapping("/employees")
 public class EmployeeManagementController {
 
 	
@@ -38,7 +40,7 @@ public class EmployeeManagementController {
 		return "Welcome to the employee Management service";
 	}
 
-	@PostMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
+	@PostMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employee) {
 
@@ -48,7 +50,7 @@ public class EmployeeManagementController {
 
 	}
 
-	@GetMapping(path = "/employees", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@GetMapping(path = "/", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
 		List<EmployeeDto> employeeList = new ArrayList<>();
 
@@ -61,7 +63,7 @@ public class EmployeeManagementController {
 		return ResponseEntity.ok(employeeList);
 	}
 
-	@GetMapping(path = "/employees/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE,
+	@GetMapping(path = "/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<EmployeeDto> getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
 		
@@ -74,7 +76,7 @@ public class EmployeeManagementController {
 		}
 	}
 
-	@PutMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> updateEmployee(@RequestBody EmployeeDto employee) {
 
 		Employee employee2 = myBeanMapper.map(employee, Employee.class);
@@ -83,14 +85,14 @@ public class EmployeeManagementController {
 
 	}
 
-	@PatchMapping(path = "/employees", consumes = { MediaType.APPLICATION_JSON_VALUE })
+	@PatchMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<String> updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
 		employeeManagementService.partialUpdateEmployee(employeeDto);
 		
 		return ResponseEntity.ok().build();
 	}
 
-	@DeleteMapping(path = "/employees/{employeeId}")
+	@DeleteMapping(path = "/{employeeId}")
 	public ResponseEntity<String> deleteEmployee(@PathVariable("employeeId") Long empId) {
 		employeeManagementService.deleteEmployee(empId);
 		
