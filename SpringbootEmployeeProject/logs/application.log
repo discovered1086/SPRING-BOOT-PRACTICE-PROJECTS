@@ -11803,3 +11803,28 @@ Unconditional classes:
 
 
 
+2019-02-03 21:21:43.929  INFO 748 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-03 21:21:43.930 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f09afa7, started on Sun Feb 03 20:42:36 CST 2019
+2019-02-03 21:21:43.930 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2019-02-03 21:21:43.931 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-02-03 21:21:43.931 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Bean 'documentationPluginsBootstrapper' completed its stop procedure
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Auditevents' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Beans' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Caches' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Health' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Conditions' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Configprops' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Env' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Info' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Loggers' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Threaddump' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Metrics' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Scheduledtasks' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Httptrace' from the JMX domain
+2019-02-03 21:21:43.933 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.e.jmx.JmxEndpointExporter        : Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Mappings' from the JMX domain
+2019-02-03 21:21:43.934  INFO 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 21:21:43.935  INFO 748 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 21:21:43.935 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-02-03 21:21:43.935 DEBUG 748 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-02-03 21:21:43.935  INFO 748 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-02-03 21:21:43.944  INFO 748 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

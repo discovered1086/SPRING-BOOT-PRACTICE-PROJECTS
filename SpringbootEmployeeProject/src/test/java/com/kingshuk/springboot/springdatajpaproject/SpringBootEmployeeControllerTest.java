@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +48,8 @@ public class SpringBootEmployeeControllerTest {
 
 	static EmployeeDto employeeDto;
 
-	static {
+	@PostConstruct
+	public void loadDataForTesting() {
 		AddressDto address = new AddressDto();
 		//address.setAddressId(9L);
 		address.setAddressLine1("771 Shady Grove Ln");
@@ -71,7 +74,6 @@ public class SpringBootEmployeeControllerTest {
 		employee = new Employee(employeeDto, new Address(address), new Department(departmentDto));
 
 		employees = Arrays.asList(employee);
-
 	}
 
 	@Test
