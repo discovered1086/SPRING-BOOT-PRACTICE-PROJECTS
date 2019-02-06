@@ -46,11 +46,11 @@ public class SpringbootEmployeeProjectApplicationTests {
 	EmployeeManagementService employeeService;
 	
 	
-	static List<EmployeeDto> employeeDtos;
+	List<EmployeeDto> employeeDtos;
 	
-	static List<Employee> employees;
+	List<Employee> employees;
 	
-	static Employee employee;
+	Employee employee;
 	
 	@PostConstruct
 	public void loadDataForTesting() {

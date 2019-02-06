@@ -40,13 +40,13 @@ public class SpringBootEmployeeControllerTest {
 	@Autowired
 	private RestTemplateBuilder restTemplateBuilder;
 
-	static List<EmployeeDto> employeeDtos;
+	List<EmployeeDto> employeeDtos;
 
-	static List<Employee> employees;
+	List<Employee> employees;
 
-	static Employee employee;
+	Employee employee;
 
-	static EmployeeDto employeeDto;
+	EmployeeDto employeeDto;
 
 	@PostConstruct
 	public void loadDataForTesting() {
