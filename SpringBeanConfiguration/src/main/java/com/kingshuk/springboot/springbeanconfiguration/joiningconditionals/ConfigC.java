@@ -19,7 +19,7 @@ public class ConfigC {
 	
 	@PostConstruct
 	public void setUp() {
-		System.out.println("Loading the ConfigC config bean");
+		System.out.println("Loading the second ConfigC config bean");
 	}
 	
 	@Bean(name="secondAddressBean")

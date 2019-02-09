@@ -5,6 +5,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration("secondCommonConfig")
 @Import({ConfigC.class, ConfigB.class})
+//@ConditionalOnExpression("'${propertycheck.enabled}' =='true'")
 @ConditionalOnProperty(name="propertycheck.enabled", havingValue="true", matchIfMissing=false)
 @ConditionalOnBean(name={"secondConfigB", "secondConfigC"})
 public class CommonConfig {
@@ -27,7 +29,7 @@ public class CommonConfig {
 	
 	@PostConstruct
 	public void setUp() {
-		System.out.println("Loading the common config bean");
+		System.out.println("Loading the second common config bean");
 	}
 	
 	@Bean(name="secondConfigEmployee")
