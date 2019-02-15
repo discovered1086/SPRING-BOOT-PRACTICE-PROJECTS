@@ -2,12 +2,17 @@ package com.kingshuk.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SpringBeanConfigurationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBeanConfigurationApplication.class, args);
+		ConfigurableApplicationContext applicationContext = 
+				SpringApplication.run(SpringBeanConfigurationApplication.class, args);
+		
+		applicationContext.getEnvironment().setActiveProfiles("default");
+		
 	}
 
 }
