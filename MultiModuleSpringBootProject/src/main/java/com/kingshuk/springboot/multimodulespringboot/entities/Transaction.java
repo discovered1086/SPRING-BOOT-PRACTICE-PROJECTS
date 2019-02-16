@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.Type;
 
@@ -44,7 +46,7 @@ public class Transaction {
 	private Category transactionCategory;
 	
 	@Column(name = "transaction_date")
-	@Type(type="java.sql.Timestamp")
+	@Temporal(TemporalType.TIMESTAMP)
 	private ZonedDateTime transactionDate;
 	
 	}
