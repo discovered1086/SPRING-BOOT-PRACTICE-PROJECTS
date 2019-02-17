@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kingshuk.springboot.multimodulespringboot.dtos.AccountDto;
-import com.kingshuk.springboot.multimodulespringboot.dtos.BankAccountDto;
-import com.kingshuk.springboot.multimodulespringboot.dtos.CreditCardAccountDto;
 import com.kingshuk.springboot.multimodulespringboot.errors.AccountNotFoundException;
+import com.kingshuk.springboot.multimodulespringboot.model.dtos.AccountDto;
+import com.kingshuk.springboot.multimodulespringboot.model.dtos.BankAccountDto;
+import com.kingshuk.springboot.multimodulespringboot.model.dtos.CreditCardAccountDto;
 import com.kingshuk.springboot.multimodulespringboot.model.entities.Account;
 import com.kingshuk.springboot.multimodulespringboot.model.entities.BankAccount;
 import com.kingshuk.springboot.multimodulespringboot.model.entities.CreditCardAccount;
@@ -35,7 +35,8 @@ public class AccountRESTController {
 
 	// Create a method to get a single account for a customer
 	@GetMapping(path = "/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<AccountDto> getSingleAccount(@PathVariable("accountId") String accountId) throws AccountNotFoundException {
+	public ResponseEntity<AccountDto> getSingleAccount(@PathVariable("accountId") String accountId)
+			throws AccountNotFoundException {
 		Account account = accountService.getSingleAccount(accountId);
 
 		if (account == null) {
@@ -47,8 +48,7 @@ public class AccountRESTController {
 
 	// Create a method to add a credit card account
 	@PostMapping(params = "accountType=1", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<CreditCardAccountDto> createCreditCardAccount(
-			@RequestBody CreditCardAccountDto accountDto) {
+	public ResponseEntity<CreditCardAccountDto> createCreditCardAccount(@RequestBody CreditCardAccountDto accountDto) {
 		CreditCardAccount creditCardAccount = beanMapper.map(accountDto, CreditCardAccount.class);
 
 		return ResponseEntity
@@ -65,10 +65,6 @@ public class AccountRESTController {
 	}
 
 	// Create a method to update an account. What we should allow to update
-
-	// Create a method to get all transactions in an account
-
-	// Create a method to get a single transaction in an account
 
 	// Create a method to delete an account
 

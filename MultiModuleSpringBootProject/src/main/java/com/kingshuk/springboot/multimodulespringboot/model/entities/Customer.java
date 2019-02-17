@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -30,7 +31,8 @@ public class Customer implements Serializable{
 
 	@Id
 	@Column(length = 20, name = "customer_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
+	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.CustomerSequenceGenerator")
 	private long customerId;
 	
 	@Column(length = 40, name = "first_name")

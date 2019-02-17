@@ -15,6 +15,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,8 +34,9 @@ public class Transaction implements Serializable{
 	private static final long serialVersionUID = -7817135024822644549L;
 
 	@Id
-	@Column(length = 20, name = "transaction_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(length = 25, name = "transaction_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
+	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.TransactionSequenceGenerator")
 	private long transactionId;
 
 	@Column(length = 1000, name = "description")

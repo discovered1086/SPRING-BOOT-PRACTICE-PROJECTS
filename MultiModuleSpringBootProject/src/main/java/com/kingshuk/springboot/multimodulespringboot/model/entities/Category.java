@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +27,8 @@ public class Category implements Serializable{
 
 	@Id
 	@Column(length = 20, name = "category_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
+	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.CategorySequenceGenerator")
 	private long categoryId;
 
 	@Column(length = 60, name = "category_name")

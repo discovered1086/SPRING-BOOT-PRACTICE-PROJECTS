@@ -1,4 +1,4 @@
-package com.kingshuk.springboot.multimodulespringboot.dtos;
+package com.kingshuk.springboot.multimodulespringboot.model.dtos;
 
 import com.kingshuk.springboot.multimodulespringboot.enums.BankAccountType;
 
