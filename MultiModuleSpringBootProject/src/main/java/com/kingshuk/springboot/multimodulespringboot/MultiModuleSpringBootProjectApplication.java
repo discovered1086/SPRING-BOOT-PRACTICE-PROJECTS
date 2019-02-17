@@ -1,15 +1,9 @@
 package com.kingshuk.springboot.multimodulespringboot;
 
 import org.dozer.DozerBeanMapper;
-import org.dozer.loader.api.BeanMappingBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import com.kingshuk.springboot.multimodulespringboot.dtos.AccountDto;
-import com.kingshuk.springboot.multimodulespringboot.dtos.CreditCardAccountDto;
-import com.kingshuk.springboot.multimodulespringboot.entities.Account;
-import com.kingshuk.springboot.multimodulespringboot.entities.CreditCardAccount;
 
 @SpringBootApplication
 public class MultiModuleSpringBootProjectApplication {

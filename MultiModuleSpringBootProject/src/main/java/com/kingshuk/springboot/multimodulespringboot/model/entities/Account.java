@@ -1,4 +1,4 @@
-package com.kingshuk.springboot.multimodulespringboot.entities;
+package com.kingshuk.springboot.multimodulespringboot.model.entities;
 
 import java.io.Serializable;
 import java.util.List;
@@ -17,6 +17,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,8 +36,10 @@ public class Account implements Serializable{
 
 	@Id
 	@Column(length = 20, name = "account_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private long accountId;
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
+	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.AccountSequenceGenerator")
+	private String accountId;
 
 	@Column(length = 50, name = "account_number")
 	private String accountNumber;

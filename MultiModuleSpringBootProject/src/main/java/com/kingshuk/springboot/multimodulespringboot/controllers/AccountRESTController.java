@@ -5,7 +5,6 @@ import javax.annotation.Resource;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kingshuk.springboot.multimodulespringboot.dtos.AccountDto;
 import com.kingshuk.springboot.multimodulespringboot.dtos.BankAccountDto;
 import com.kingshuk.springboot.multimodulespringboot.dtos.CreditCardAccountDto;
-import com.kingshuk.springboot.multimodulespringboot.entities.Account;
-import com.kingshuk.springboot.multimodulespringboot.entities.BankAccount;
-import com.kingshuk.springboot.multimodulespringboot.entities.CreditCardAccount;
 import com.kingshuk.springboot.multimodulespringboot.errors.AccountNotFoundException;
-import com.kingshuk.springboot.multimodulespringboot.repos.IAccountRepository;
+import com.kingshuk.springboot.multimodulespringboot.model.entities.Account;
+import com.kingshuk.springboot.multimodulespringboot.model.entities.BankAccount;
+import com.kingshuk.springboot.multimodulespringboot.model.entities.CreditCardAccount;
+import com.kingshuk.springboot.multimodulespringboot.service.IAccountService;
 
 @RestController
 @RequestMapping("/accounts")
@@ -31,14 +30,13 @@ public class AccountRESTController {
 	private DozerBeanMapper beanMapper;
 
 	@Autowired
-	private IAccountRepository accountRepository;
+	private IAccountService accountService;
 	// Create a method to get all accounts for a customer
 
 	// Create a method to get a single account for a customer
 	@GetMapping(path = "/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<AccountDto> getSingleAccount(@PathVariable("accountId") long accountId) throws AccountNotFoundException {
-		Account account = accountRepository.getSingleAccount(accountId).
-				orElseThrow(AccountNotFoundException::new);
+	public ResponseEntity<AccountDto> getSingleAccount(@PathVariable("accountId") String accountId) throws AccountNotFoundException {
+		Account account = accountService.getSingleAccount(accountId);
 
 		if (account == null) {
 			return ResponseEntity.notFound().build();
@@ -54,7 +52,7 @@ public class AccountRESTController {
 		CreditCardAccount creditCardAccount = beanMapper.map(accountDto, CreditCardAccount.class);
 
 		return ResponseEntity
-				.ok(beanMapper.map(accountRepository.createAccount(creditCardAccount), CreditCardAccountDto.class));
+				.ok(beanMapper.map(accountService.createAccount(creditCardAccount), CreditCardAccountDto.class));
 
 	}
 
@@ -63,7 +61,7 @@ public class AccountRESTController {
 	public ResponseEntity<BankAccountDto> createBankAccount(@RequestBody BankAccountDto accountDto) {
 		BankAccount bankAccount = beanMapper.map(accountDto, BankAccount.class);
 
-		return ResponseEntity.ok(beanMapper.map(accountRepository.createAccount(bankAccount), BankAccountDto.class));
+		return ResponseEntity.ok(beanMapper.map(accountService.createAccount(bankAccount), BankAccountDto.class));
 	}
 
 	// Create a method to update an account. What we should allow to update

@@ -1,19 +1,17 @@
-package com.kingshuk.springboot.multimodulespringboot.repos;
+package com.kingshuk.springboot.multimodulespringboot.model.repos;
 
 import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.kingshuk.springboot.multimodulespringboot.entities.Account;
+import com.kingshuk.springboot.multimodulespringboot.model.entities.Account;
 
 @Repository
-@Transactional
 public class AccountRepositoryImpl implements IAccountRepository {
 
 	private EntityManager entityManager;
@@ -25,7 +23,7 @@ public class AccountRepositoryImpl implements IAccountRepository {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public <T extends Account> Optional<T> getSingleAccount(long accountId) {
+	public <T extends Account> Optional<T> getSingleAccount(String accountId) {
 		Session session = entityManager.unwrap(Session.class);
 
 		return Optional.ofNullable((T) session.get(Account.class, accountId));
@@ -33,7 +31,7 @@ public class AccountRepositoryImpl implements IAccountRepository {
 	}
 
 	@Override
-	public List<Account> getAllAccounts(long customerId) {
+	public List<Account> getAllAccounts(String customerId) {
 		return null;
 	}
 
@@ -43,7 +41,7 @@ public class AccountRepositoryImpl implements IAccountRepository {
 	}
 
 	@Override
-	public void deleteAccount(long accountId) {
+	public void deleteAccount(String accountId) {
 
 	}
 
@@ -54,9 +52,10 @@ public class AccountRepositoryImpl implements IAccountRepository {
 
 		session.saveOrUpdate(account.getAccountHolder());
 
-		Long id = (Long) session.save(account);
+		String id = (String) session.save(account);
 
 		return (T) session.find(Account.class, id);
 	}
 
+	
 }

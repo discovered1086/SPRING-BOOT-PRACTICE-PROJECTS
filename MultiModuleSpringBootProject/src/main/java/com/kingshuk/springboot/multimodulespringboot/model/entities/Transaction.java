@@ -1,4 +1,4 @@
-package com.kingshuk.springboot.multimodulespringboot.entities;
+package com.kingshuk.springboot.multimodulespringboot.model.entities;
 
 import java.io.Serializable;
 import java.util.Date;
