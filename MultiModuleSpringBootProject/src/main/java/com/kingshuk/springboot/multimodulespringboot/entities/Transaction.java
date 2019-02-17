@@ -1,7 +1,6 @@
 package com.kingshuk.springboot.multimodulespringboot.entities;
 
-import java.sql.Timestamp;
-import java.time.ZonedDateTime;
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -16,8 +15,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.Type;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,7 +24,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Transaction {
+public class Transaction implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7817135024822644549L;
 
 	@Id
 	@Column(length = 20, name = "transaction_id")
@@ -45,8 +47,13 @@ public class Transaction {
 	@JoinColumn(name = "category_id", referencedColumnName = "category_id", nullable = false)
 	private Category transactionCategory;
 	
+	
+	/*
+	 * I just found out that @Temporal can only be used
+	 * with java.util.Date or java.sql.Date
+	 */
 	@Column(name = "transaction_date")
 	@Temporal(TemporalType.TIMESTAMP)
-	private ZonedDateTime transactionDate;
+	private Date transactionDate;
 	
 	}

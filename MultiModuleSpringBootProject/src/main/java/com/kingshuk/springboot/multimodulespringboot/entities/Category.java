@@ -1,5 +1,7 @@
 package com.kingshuk.springboot.multimodulespringboot.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +16,12 @@ import lombok.Setter;
 @Table(name = "transaction_category")
 @Getter
 @Setter
-public class Category {
+public class Category implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7223290830168812286L;
 
 	@Id
 	@Column(length = 20, name = "category_id")

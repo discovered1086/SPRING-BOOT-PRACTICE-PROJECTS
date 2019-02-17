@@ -1,5 +1,6 @@
 package com.kingshuk.springboot.multimodulespringboot.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -20,8 +21,13 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "customer")
-public class Customer {
+public class Customer implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7267904589383486101L;
+
 	@Id
 	@Column(length = 20, name = "customer_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -33,7 +39,7 @@ public class Customer {
 	@Column(length = 40, name = "last_name")
 	private String lastName;
 	
-	@OneToMany(cascade = CascadeType.PERSIST,
+	@OneToMany(cascade = {CascadeType.PERSIST,CascadeType.REMOVE},
 			mappedBy = "accountHolder",
 			fetch = FetchType.LAZY)
 	private List<Account> customerAccounts;
