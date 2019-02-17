@@ -1,7 +1,7 @@
 package com.kingshuk.springboot.multimodulespringboot.repos;
 
-import java.io.Serializable;
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
@@ -23,11 +23,13 @@ public class AccountRepositoryImpl implements IAccountRepository {
 		this.entityManager = entityManager;
 	}
 
-	
-
+	@SuppressWarnings("unchecked")
 	@Override
-	public Account getSingleAccount(long accountId) {
-		return null;
+	public <T extends Account> Optional<T> getSingleAccount(long accountId) {
+		Session session = entityManager.unwrap(Session.class);
+
+		return Optional.ofNullable((T) session.get(Account.class, accountId));
+
 	}
 
 	@Override
@@ -45,17 +47,15 @@ public class AccountRepositoryImpl implements IAccountRepository {
 
 	}
 
-
-
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T extends Account> T createAccount(T account) {
 		Session session = entityManager.unwrap(Session.class);
-		
+
 		session.saveOrUpdate(account.getAccountHolder());
-		
-		Long id = (Long)session.save(account);
-		
+
+		Long id = (Long) session.save(account);
+
 		return (T) session.find(Account.class, id);
 	}
 
