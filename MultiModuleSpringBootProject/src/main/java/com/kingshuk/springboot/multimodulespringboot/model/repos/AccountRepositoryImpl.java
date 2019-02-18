@@ -11,7 +11,10 @@ import org.springframework.stereotype.Repository;
 
 import com.kingshuk.springboot.multimodulespringboot.model.entities.Account;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Repository
+@Slf4j
 public class AccountRepositoryImpl implements IAccountRepository {
 
 	private EntityManager entityManager;
@@ -45,17 +48,30 @@ public class AccountRepositoryImpl implements IAccountRepository {
 
 	}
 
+	/*
+	 * @SuppressWarnings("unchecked")
+	 * 
+	 * @Override public <T extends Account> T createAccount(T account) { Session
+	 * session = entityManager.unwrap(Session.class);
+	 * 
+	 * log.info(String.format("The session value is %s",session));
+	 * 
+	 * account.getAccountHolder().getAddressList().forEach(session::saveOrUpdate);
+	 * 
+	 * session.saveOrUpdate(account.getAccountHolder());
+	 * 
+	 * String id = (String) session.save(account);
+	 * 
+	 * return (T) session.find(Account.class, id); }
+	 */
+
 	@SuppressWarnings("unchecked")
-	@Override
 	public <T extends Account> T createAccount(T account) {
 		Session session = entityManager.unwrap(Session.class);
-
-		session.saveOrUpdate(account.getAccountHolder());
 
 		String id = (String) session.save(account);
 
 		return (T) session.find(Account.class, id);
 	}
 
-	
 }

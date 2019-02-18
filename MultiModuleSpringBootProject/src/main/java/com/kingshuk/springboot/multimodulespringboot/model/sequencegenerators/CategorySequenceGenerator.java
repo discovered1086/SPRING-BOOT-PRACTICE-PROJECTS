@@ -8,12 +8,10 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-@Component
 public class CategorySequenceGenerator implements IdentifierGenerator{
 	
 	
 	@Override
-	@Transactional
 	public Serializable generate(SharedSessionContractImplementor session, Object object) {
 		
 		@SuppressWarnings("unchecked")

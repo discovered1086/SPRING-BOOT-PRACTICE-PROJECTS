@@ -35,9 +35,10 @@ public class Transaction implements Serializable{
 
 	@Id
 	@Column(length = 25, name = "transaction_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
-	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.TransactionSequenceGenerator")
-	private long transactionId;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transactionSequenceGenerator")
+	@GenericGenerator(name="transactionSequenceGenerator", 
+	strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.TransactionSequenceGenerator")
+	private String transactionId;
 
 	@Column(length = 1000, name = "description")
 	private String description;

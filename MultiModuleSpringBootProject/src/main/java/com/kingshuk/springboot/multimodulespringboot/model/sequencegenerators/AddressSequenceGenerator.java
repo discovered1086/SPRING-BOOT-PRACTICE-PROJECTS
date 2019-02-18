@@ -10,22 +10,22 @@ import org.hibernate.query.Query;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class CustomerSequenceGenerator implements IdentifierGenerator{
+public class AddressSequenceGenerator implements IdentifierGenerator{
 	
 	
 	@Override
-	public Serializable generate(SharedSessionContractImplementor session, Object object){
+	@SuppressWarnings("unchecked")
+	public Serializable generate(SharedSessionContractImplementor session, Object object) {
 		log.info(String.format("The session value is %s",session));
 		
 		Session session2 = Session.class.cast(session);
 		
-		@SuppressWarnings("unchecked")
-		Query<String> sequenceValue = session2.createNativeQuery("SELECT LPAD(customer_sequence.nextval,10, '0') FROM dual");
+		Query<String> sequenceValue = session2.createNativeQuery("SELECT LPAD(address_sequence.nextval,8, '0') FROM dual");
 		
 		
 		String nextSequenceValue = String.valueOf(sequenceValue.getSingleResult());
 		
-		return "CUST".concat(nextSequenceValue);
+		return "ADD".concat(nextSequenceValue);
 	}
 
 }

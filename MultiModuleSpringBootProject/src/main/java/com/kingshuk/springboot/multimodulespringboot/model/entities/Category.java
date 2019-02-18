@@ -29,7 +29,7 @@ public class Category implements Serializable{
 	@Column(length = 20, name = "category_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
 	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.CategorySequenceGenerator")
-	private long categoryId;
+	private String categoryId;
 
 	@Column(length = 60, name = "category_name")
 	private String categoryName;
