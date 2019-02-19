@@ -19,10 +19,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	//runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile ("com.oracle:ojdbc7:12.1.0.1") 
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.1.3.RELEASE'
 	
 	compile group: 'net.sf.dozer', name: 'dozer', version: '5.5.1'
 }

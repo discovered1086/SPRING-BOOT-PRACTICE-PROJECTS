@@ -18,11 +18,11 @@ public class AddressRepositoryImpl implements IAddressRepository {
 
 	@Override
 	public Address addNewAddress(Address address) {
-		Session session = entityManager.unwrap(Session.class);
+		//Session session = entityManager.unwrap(Session.class);
 		
-		String addressId = (String) session.save(address);
+		//String addressId = (String) session.save(address);
 		
-		return session.get(Address.class, addressId);
+		return entityManager.merge(address);
 	}
 	
 	

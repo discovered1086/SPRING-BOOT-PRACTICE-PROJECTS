@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
+import com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.newsequences.NewAccountSequenceGenerator;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,8 +30,11 @@ public class Category implements Serializable{
 
 	@Id
 	@Column(length = 20, name = "category_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequenceGenerator")
-	@GenericGenerator(name="accountSequenceGenerator", strategy="com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.CategorySequenceGenerator")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categorySequenceGen")
+	@GenericGenerator(name = "categorySequenceGen", 
+			strategy = "com.kingshuk.springboot.multimodulespringboot.model.sequencegenerators.newsequences.NewAccountSequenceGenerator", parameters = {
+			@Parameter(name = NewAccountSequenceGenerator.INCREMENT_PARAM, value = "1"),
+			@Parameter(name = "stringPrefix", value = "CAT"), @Parameter(name = "numberFormat", value = "%08d") })
 	private String categoryId;
 
 	@Column(length = 60, name = "category_name")

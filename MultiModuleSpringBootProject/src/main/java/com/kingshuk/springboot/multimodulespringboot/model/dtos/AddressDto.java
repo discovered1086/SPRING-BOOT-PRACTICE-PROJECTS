@@ -26,7 +26,6 @@ public class AddressDto implements Serializable{
 	
 	private String addressLine1, addressLine2, city, state, zipCode;
 	
-	private Set<Customer> customersAtThisAddress;
 
 	@Override
 	public String toString() {
