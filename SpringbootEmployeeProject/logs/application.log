@@ -468,3 +468,8 @@ java.sql.SQLSyntaxErrorException: ORA-02289: sequence does not exist
 2019-02-18 20:50:50.104  INFO 1558 --- [http-nio-9090-exec-2] a.c.c.C.[.[.[/SpringBootEmployeeProject] : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-02-18 20:50:50.105  INFO 1558 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-02-18 20:50:50.116  INFO 1558 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-02-18 21:10:06.861  INFO 1558 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-18 21:10:06.864  INFO 1558 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-18 21:10:06.865  INFO 1558 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-18 21:10:06.866  INFO 1558 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-02-18 21:10:08.320  INFO 1558 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
