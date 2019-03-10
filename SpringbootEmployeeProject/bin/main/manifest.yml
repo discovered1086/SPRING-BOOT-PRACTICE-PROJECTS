@@ -1,0 +1,6 @@
+---
+applications:
+- name: kingshuk-employee-service
+  memory: 1G
+  buildpack: https://github.com/cloudfoundry/java-buildpack
+  path: /Volumes/Work/LOCAL-GIT-REPOSITORY/SPRING-BOOT-PRACTICE-PROJECTS/SpringbootEmployeeProject/build/libs/SpringbootEmployeeProject-0.0.1-SNAPSHOT.jar

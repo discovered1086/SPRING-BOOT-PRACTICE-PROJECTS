@@ -6,7 +6,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: env, mappings, health
+        include: env, mappings, health, autoconfig, info, beans
     enabled-by-default: true
 
 ---

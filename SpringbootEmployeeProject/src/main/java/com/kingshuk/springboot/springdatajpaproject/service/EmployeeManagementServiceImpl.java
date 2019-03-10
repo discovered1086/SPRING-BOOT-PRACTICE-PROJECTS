@@ -85,6 +85,8 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 			
 			if(address==null) {
 				address = employee.getAddress();
+				
+				address = addressRepository.save(address);
 			}
 			
 			employee2.setAddress(address);
