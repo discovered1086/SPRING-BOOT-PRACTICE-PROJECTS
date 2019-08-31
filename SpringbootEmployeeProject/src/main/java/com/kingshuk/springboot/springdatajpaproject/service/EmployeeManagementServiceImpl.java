@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -41,11 +43,14 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 	}
 
 	@Override
+	@Transactional(readOnly = true)
+	@Cacheable(value = "employee-cache")
 	public Employee getEmployeeById(long employeeId) {
 		return repository.findById(employeeId).orElse(null);
 	}
 
 	@Override
+	@CacheEvict(value = "employee-cache")
 	public void deleteEmployee(long employeeId) {
 		repository.deleteById(employeeId);
 	}

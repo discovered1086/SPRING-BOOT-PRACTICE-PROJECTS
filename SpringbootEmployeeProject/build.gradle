@@ -32,6 +32,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	
+	// https://mvnrepository.com/artifact/com.hazelcast/hazelcast
+	compile group: 'com.hazelcast', name: 'hazelcast'
+	
+	// https://mvnrepository.com/artifact/com.hazelcast/hazelcast-spring
+	compile group: 'com.hazelcast', name: 'hazelcast-spring'
+	
+	
+	
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'

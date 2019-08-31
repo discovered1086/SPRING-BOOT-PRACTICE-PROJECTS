@@ -1,5 +1,7 @@
 package com.kingshuk.springboot.springdatajpaproject.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +22,9 @@ import lombok.Setter;
 @Setter
 @Entity
 @RequiredArgsConstructor
-public class Employee {
+public class Employee implements Serializable{
+
+	private static final long serialVersionUID = -1497555110482987046L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
