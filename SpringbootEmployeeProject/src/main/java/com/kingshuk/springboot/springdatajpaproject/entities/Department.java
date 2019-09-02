@@ -1,5 +1,7 @@
 package com.kingshuk.springboot.springdatajpaproject.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,13 @@ import javax.persistence.Id;
 import com.kingshuk.springboot.springdatajpaproject.dto.DepartmentDto;
 
 @Entity
-public class Department {
+public class Department implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1961170966206452545L;
+
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	@Column(name="department_id")

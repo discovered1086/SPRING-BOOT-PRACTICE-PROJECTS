@@ -1,5 +1,7 @@
 package com.kingshuk.springboot.springdatajpaproject.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,13 @@ import javax.persistence.Id;
 import com.kingshuk.springboot.springdatajpaproject.dto.AddressDto;
 
 @Entity
-public class Address {
+public class Address implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2684602200175004772L;
+
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	@Column(name="address_id")
