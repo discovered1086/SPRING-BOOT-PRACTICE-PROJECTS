@@ -2,7 +2,6 @@ package com.kingshuk.springboot.springdatajpaproject.service;
 
 import java.util.List;
 
-import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -20,8 +19,6 @@ import com.kingshuk.springboot.springdatajpaproject.repos.EmployeeManagementRepo
 @Service
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
 
-	@Autowired
-	private DozerBeanMapper myBeanMapper;
 
 	@Autowired
 	private EmployeeManagementRepository repository;
