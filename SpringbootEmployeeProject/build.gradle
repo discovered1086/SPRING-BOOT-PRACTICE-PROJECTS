@@ -33,22 +33,22 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
-	
+
 	// https://mvnrepository.com/artifact/com.hazelcast/hazelcast
 	compile group: 'com.hazelcast', name: 'hazelcast'
-	
+
 	// https://mvnrepository.com/artifact/com.hazelcast/hazelcast-spring
 	compile group: 'com.hazelcast', name: 'hazelcast-spring'
-	
-	
-	
+
+
+
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.2.RELEASE'
-	
+
 	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.1.2.RELEASE'
-	
+
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
@@ -57,16 +57,32 @@ dependencies {
 	compile group: 'net.sf.dozer', name: 'dozer', version: '5.5.1'
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
-	
+
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+
+
 }
 
 springBoot {
-    // This statement tells the Gradle Spring Boot plugin
-    // to generate a file
-    // build/resources/main/META-INF/build-info.properties
-    // that is picked up by Spring Boot to display
-    // via /info endpoint.
-    buildInfo()
+	// This statement tells the Gradle Spring Boot plugin
+	// to generate a file
+	// build/resources/main/META-INF/build-info.properties
+	// that is picked up by Spring Boot to display
+	// via /info endpoint.
+	buildInfo()
+}
+
+sourceSets{
+	main{
+		java.srcDirs 'src/main/java'
+		resources.srcDirs 'src/main/resources'
+	}
+
+	test{
+		java.srcDirs 'src/test/java'
+		resources.srcDirs 'src/test/resources'
+	}
 }
 
 
