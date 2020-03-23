@@ -32,11 +32,7 @@ public class EmployeeManagementController {
 	@Autowired
 	private EmployeeManagementService employeeManagementService;
 
-	@GetMapping("/")
-	public String welcomeMessage() {
-		return "Welcome to the employee Management service";
-	}
-	
+
 	@PostMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employee) {
@@ -61,8 +57,7 @@ public class EmployeeManagementController {
 		return ResponseEntity.ok(employeeList);
 	}
 
-	@GetMapping(path = "/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_XML_VALUE })
+	@GetMapping(path = "/{employeeId}", produces = {MediaType.APPLICATION_JSON_VALUE})
 	public ResponseEntity<EmployeeDto> getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
 
 		Employee employee = employeeManagementService.getEmployeeById(empId);

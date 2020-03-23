@@ -1,30 +1,25 @@
 package com.kingshuk.springboot.springdatajpaproject;
 
-import java.io.File;
-import java.nio.charset.StandardCharsets;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 
-import org.apache.commons.io.FileUtils;
+import org.dozer.DozerBeanMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.RequestBuilder;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.kingshuk.springboot.springdatajpaproject.config.MyCustomConfiguration;
-import com.kingshuk.springboot.springdatajpaproject.controller.EmployeeManagementController;
 import com.kingshuk.springboot.springdatajpaproject.dto.AddressDto;
 import com.kingshuk.springboot.springdatajpaproject.dto.DepartmentDto;
 import com.kingshuk.springboot.springdatajpaproject.dto.EmployeeDto;
@@ -41,17 +36,20 @@ import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementSe
  * @author kingshuksmacbookpro
  *
  */
+
 @RunWith(SpringRunner.class)
-//@SpringBootTest(classes = {EmployeeManagementController.class})
-@WebMvcTest(value = EmployeeManagementController.class)
+@WebMvcTest
 @ContextConfiguration(classes = MyCustomConfiguration.class)
 public class SpringbootEmployeeProjectApplicationTests {
 
 	@Autowired
-	MockMvc mockMvc;
+	private MockMvc mockMvc;
 
 	@MockBean
-	EmployeeManagementService employeeService;
+	private EmployeeManagementService employeeService;
+	
+	@MockBean
+	private DozerBeanMapper myBeanMapper;
 
 	List<EmployeeDto> employeeDtos;
 
@@ -88,21 +86,12 @@ public class SpringbootEmployeeProjectApplicationTests {
 	}
 
 	@Test
-	public void testGetRequestForAllEmployees() throws Exception {
-		File jsonFile = new File(getClass().getClassLoader().getResource("jsonFiles/employee.json").getFile());
+	public void testFindAllEmployees() throws Exception {
+		when(employeeService.getAllEmployees()).thenReturn(employees);
 
-		String expectedResult = FileUtils.readFileToString(jsonFile, StandardCharsets.UTF_8);
+		mockMvc.perform(get("/SpringBootEmployeeProject/employees/").contextPath("/SpringBootEmployeeProject"))
+				.andExpect(status().isOk());
 
-		Mockito.when(employeeService.getAllEmployees()).thenReturn(employees);
-
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/employees")
-				.accept(MediaType.APPLICATION_JSON_VALUE);
-
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-
-		String actualResult = result.getResponse().getContentAsString();
-
-		JSONAssert.assertEquals(expectedResult, actualResult, true);
 	}
 
 }
