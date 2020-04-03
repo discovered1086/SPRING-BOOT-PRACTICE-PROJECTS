@@ -32,7 +32,6 @@ public class EmployeeManagementController {
 	@Autowired
 	private EmployeeManagementService employeeManagementService;
 
-
 	@PostMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employee) {
@@ -44,11 +43,16 @@ public class EmployeeManagementController {
 
 	}
 
-	@GetMapping(path = "/", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@GetMapping(path = "/", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
 		List<EmployeeDto> employeeList = new ArrayList<>();
 
-		myBeanMapper.map(employeeManagementService.getAllEmployees(), employeeList);
+		List<Employee> allEmployees = employeeManagementService.getAllEmployees();
+
+		allEmployees.forEach(employee -> {
+			EmployeeDto employeeDto = myBeanMapper.map(employee, EmployeeDto.class);
+			employeeList.add(employeeDto);
+		});
 
 		if (employeeList.isEmpty()) {
 			return ResponseEntity.noContent().build();
@@ -57,7 +61,7 @@ public class EmployeeManagementController {
 		return ResponseEntity.ok(employeeList);
 	}
 
-	@GetMapping(path = "/{employeeId}", produces = {MediaType.APPLICATION_JSON_VALUE})
+	@GetMapping(path = "/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
 
 		Employee employee = employeeManagementService.getEmployeeById(empId);
@@ -75,7 +79,7 @@ public class EmployeeManagementController {
 		if (employee == null) {
 			throw new EmployeeNotFoundException();
 		}
-		
+
 		return ResponseEntity.ok(myBeanMapper.map(employee, EmployeeDto.class));
 
 	}

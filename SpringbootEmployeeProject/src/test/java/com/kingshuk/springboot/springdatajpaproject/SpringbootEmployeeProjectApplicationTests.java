@@ -38,6 +38,7 @@ import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementSe
  */
 
 @RunWith(SpringRunner.class)
+//@SpringBootTest(webEnvironment = WebEnvironment.MOCK, classes = { SpringbootEmployeeProjectApplication.class })
 @WebMvcTest
 @ContextConfiguration(classes = MyCustomConfiguration.class)
 public class SpringbootEmployeeProjectApplicationTests {
@@ -45,9 +46,12 @@ public class SpringbootEmployeeProjectApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	/*@Autowired
+	private WebApplicationContext webApplicationContext;*/
+
 	@MockBean
 	private EmployeeManagementService employeeService;
-	
+
 	@MockBean
 	private DozerBeanMapper myBeanMapper;
 
@@ -56,6 +60,11 @@ public class SpringbootEmployeeProjectApplicationTests {
 	List<Employee> employees;
 
 	Employee employee;
+
+	/*@Before
+	public void setUp() {
+		this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+	}*/
 
 	@PostConstruct
 	public void loadDataForTesting() {
