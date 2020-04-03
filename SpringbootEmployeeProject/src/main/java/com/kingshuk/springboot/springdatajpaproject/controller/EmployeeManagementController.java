@@ -32,7 +32,7 @@ public class EmployeeManagementController {
 	@Autowired
 	private EmployeeManagementService employeeManagementService;
 
-	@PostMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
+	@PostMapping(consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employee) {
 
@@ -43,7 +43,7 @@ public class EmployeeManagementController {
 
 	}
 
-	@GetMapping(path = "/", produces = { MediaType.APPLICATION_JSON_VALUE })
+	@GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
 		List<EmployeeDto> employeeList = new ArrayList<>();
 
@@ -84,7 +84,7 @@ public class EmployeeManagementController {
 
 	}
 
-	@PutMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping(consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> updateEmployee(@RequestBody EmployeeDto employee) {
 
 		Employee employee2 = myBeanMapper.map(employee, Employee.class);
@@ -94,7 +94,7 @@ public class EmployeeManagementController {
 
 	}
 
-	@PatchMapping(path = "/", consumes = { MediaType.APPLICATION_JSON_VALUE })
+	@PatchMapping(consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<String> updatePartialEmployeeDto(@RequestBody EmployeeDto employeeDto) {
 		employeeManagementService.partialUpdateEmployee(employeeDto);
 
