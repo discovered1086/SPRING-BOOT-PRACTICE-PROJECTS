@@ -6,7 +6,15 @@ public class AddressDto {
 	
 	private long addressId;
 	
-	private String addressLine1, addressLine2, city, state, zipCode;
+	private String addressLine1;
+	
+	private String addressLine2;
+	
+	private String city;
+	
+	private String state;
+	
+	private String zipCode;
 
 	public long getAddressId() {
 		return addressId;
