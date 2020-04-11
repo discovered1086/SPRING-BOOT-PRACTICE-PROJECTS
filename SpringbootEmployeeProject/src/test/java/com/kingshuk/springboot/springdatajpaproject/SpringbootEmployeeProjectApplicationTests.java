@@ -16,13 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.kingshuk.springboot.springdatajpaproject.config.MyCustomConfiguration;
-import com.kingshuk.springboot.springdatajpaproject.controller.EmployeeManagementController;
 import com.kingshuk.springboot.springdatajpaproject.dto.AddressDto;
 import com.kingshuk.springboot.springdatajpaproject.dto.DepartmentDto;
 import com.kingshuk.springboot.springdatajpaproject.dto.EmployeeDto;
@@ -41,9 +37,7 @@ import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementSe
  */
 
 @RunWith(SpringRunner.class)
-@ActiveProfiles("test")
-@WebMvcTest(controllers = EmployeeManagementController.class)
-@ContextConfiguration(classes = MyCustomConfiguration.class)
+@WebMvcTest
 public class SpringbootEmployeeProjectApplicationTests {
 
 	@Autowired
