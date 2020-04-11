@@ -22,6 +22,8 @@ import com.kingshuk.springboot.springdatajpaproject.entities.Employee;
 import com.kingshuk.springboot.springdatajpaproject.exceptionhandling.EmployeeNotFoundException;
 import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/employees")
 public class EmployeeManagementController {
@@ -61,6 +63,13 @@ public class EmployeeManagementController {
 		return ResponseEntity.ok(employeeList);
 	}
 
+	@ApiOperation(
+			value = "Retrieves a single employee",
+			notes = "Retrieves a single employee data using the employee Id",
+			response = EmployeeDto.class,
+			responseContainer = "ResponseEntity",
+			produces = MediaType.APPLICATION_JSON_VALUE
+			)
 	@GetMapping(path = "/{employeeId}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<EmployeeDto> getEmployeeByEmployeeId(@PathVariable("employeeId") Long empId) {
 
