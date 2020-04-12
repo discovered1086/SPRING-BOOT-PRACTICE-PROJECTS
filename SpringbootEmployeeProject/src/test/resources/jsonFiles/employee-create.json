@@ -1,0 +1,17 @@
+{
+	"employeeId": 0,
+	"firstName": "Kingshuk",
+	"lastName": "Mukherjee",
+	"department": {
+		"departmentId": 0,
+		"departmentName": "IT"
+	},
+	"address": {
+		"addressId": 0,
+		"addressLine1": "771 Shady Grove Ln",
+		"addressLine2": "",
+		"city": "Buffalo Grove",
+		"state": "IL",
+		"zipCode": "60089"
+	}
+}

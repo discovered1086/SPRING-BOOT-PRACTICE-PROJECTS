@@ -28,11 +28,19 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/employees")
 public class EmployeeManagementController {
 
-	@Autowired
+	
 	private DozerBeanMapper myBeanMapper;
+	
+	private EmployeeManagementService employeeManagementService;
 
 	@Autowired
-	private EmployeeManagementService employeeManagementService;
+	public EmployeeManagementController(DozerBeanMapper myBeanMapper,
+			EmployeeManagementService employeeManagementService) {
+		super();
+		this.myBeanMapper = myBeanMapper;
+		this.employeeManagementService = employeeManagementService;
+	}
+
 
 	@PostMapping(consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
