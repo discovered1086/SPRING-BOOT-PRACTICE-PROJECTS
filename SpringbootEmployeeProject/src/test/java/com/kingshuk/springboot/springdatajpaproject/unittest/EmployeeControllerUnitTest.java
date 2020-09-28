@@ -1,9 +1,12 @@
 package com.kingshuk.springboot.springdatajpaproject.unittest;
 
-
-import static org.mockito.Mockito.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -47,6 +50,8 @@ import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementSe
 @RunWith(SpringRunner.class)
 @WebMvcTest
 public class EmployeeControllerUnitTest {
+
+	private static final long EMPLOYEE_ID = 9l;
 
 	private static final String EMPLOYEE_UPDATE_JSON = "jsonFiles/employee-update.json";
 
@@ -133,8 +138,7 @@ public class EmployeeControllerUnitTest {
 				.andExpect(content().json(jsonResponse));
 
 	}
-	
-	
+
 	@Test
 	public void testUpdateEmployee() throws Exception {
 		when(employeeService.addOrUpdateEmployee(any())).thenReturn(getUpdateEmployeeObject());
@@ -147,31 +151,26 @@ public class EmployeeControllerUnitTest {
 
 		String jsonResponse = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
 
-		mockMvc.perform(post(EMPLOYEES_URI_PATH).contextPath(CONTEXT_PATH).content(jsonRequest)
+		mockMvc.perform(put(EMPLOYEES_URI_PATH).contextPath(CONTEXT_PATH).content(jsonRequest)
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andExpect(content().json(jsonResponse));
 
 	}
-	
-	
+
 	@Test
 	public void testDeleteEmployee() throws Exception {
-		when(employeeService.addOrUpdateEmployee(any())).thenReturn(employee);
+		doNothing().when(employeeService).deleteEmployee(EMPLOYEE_ID);
 
-		Resource resource = new ClassPathResource(EMPLOYEE_CREATE_JSON);
-
-		String jsonRequest = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
-
-		resource = new ClassPathResource(EMPLOYEE_CREATE_RESPONSE_JSON);
-
-		String jsonResponse = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
-
-		mockMvc.perform(post(EMPLOYEES_URI_PATH).contextPath(CONTEXT_PATH).content(jsonRequest)
-				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
-				.andExpect(content().json(jsonResponse));
+		mockMvc.perform(
+				delete(new StringBuilder().append(EMPLOYEES_URI_PATH)
+						.append("/")
+						.append(String.valueOf(EMPLOYEE_ID))
+						.toString())
+				.contextPath(CONTEXT_PATH).accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
 
 	}
-	
+
 	private Employee getUpdateEmployeeObject() {
 		AddressDto address = new AddressDto();
 		address.setAddressId(9L);
@@ -191,7 +190,7 @@ public class EmployeeControllerUnitTest {
 		employeeDto.setLastName("Banerjee");
 		employeeDto.setAddress(address);
 		employeeDto.setDepartment(departmentDto);
-		
+
 		return new Employee(employeeDto, new Address(address), new Department(departmentDto));
 	}
 
