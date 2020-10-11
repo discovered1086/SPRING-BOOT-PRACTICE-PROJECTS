@@ -1,7 +1,9 @@
 package com.kingshuk.springboot.springdatajpaproject.controller;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +28,13 @@ import com.kingshuk.springboot.springdatajpaproject.service.EmployeeManagementSe
 @RequestMapping("/employees")
 public class EmployeeManagementController {
 
-	@Autowired
+	
 	private DozerBeanMapper myBeanMapper;
+	
+	@Autowired
+	public EmployeeManagementController(DozerBeanMapper beanMapper) {
+		this.myBeanMapper = beanMapper;
+	}
 
 	@Autowired
 	private EmployeeManagementService employeeManagementService;
@@ -43,11 +50,19 @@ public class EmployeeManagementController {
 
 	}
 
+	
 	@GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
 		List<EmployeeDto> employeeList = new ArrayList<>();
 
 		List<Employee> allEmployees = employeeManagementService.getAllEmployees();
+
+		allEmployees.stream().sorted((e1, e2) -> e1.getLastName().compareTo(e2.getLastName()));
+
+		List<Employee> collect = allEmployees.stream()
+				.filter(emp -> "Payroll".equals(emp.getDepartment().getDepartmentName())).collect(Collectors.toList());
+		
+		allEmployees.removeAll(collect);
 
 		allEmployees.forEach(employee -> {
 			EmployeeDto employeeDto = myBeanMapper.map(employee, EmployeeDto.class);
