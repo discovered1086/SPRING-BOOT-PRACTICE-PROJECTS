@@ -1,6 +1,7 @@
 package com.kingshuk.webservices.rest.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,8 +19,8 @@ public class UsersService {
 		return usersRepository.findAll();
 	}
 
-	public User findOneUser(String id) {
-		return usersRepository.findById(Integer.parseInt(id)).get();
+	public Optional<User> findOneUser(String id) {
+		return usersRepository.findById(Integer.parseInt(id));
 	}
 
 	public User createNewUser(User user) {
