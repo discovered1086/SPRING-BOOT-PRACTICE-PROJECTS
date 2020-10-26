@@ -6,8 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -22,6 +26,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @Entity
+@ApiModel(description = "This model works as  DTO for a single user",
+			value = "Social Media User")
 public class User {
 	
 	@Id
@@ -29,7 +35,11 @@ public class User {
 	private int id;
 	
 	@Size(min = 2, message = "Name should be at least two characters")
+	@ApiModelProperty(notes = "name should at least have 2 characters")
 	private String name;
+	
+	@Past
+	@ApiModelProperty(notes = "Date of Birth must be in the past")
 	private LocalDate dob;
 
 }
