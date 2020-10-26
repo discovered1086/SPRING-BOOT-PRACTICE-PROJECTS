@@ -11,6 +11,7 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,6 +56,20 @@ public class UsersController {
 		entityModel.add(resourceLink.withRel("all-users"));
 
 		return ResponseEntity.ok(entityModel);
+	}
+	
+	@DeleteMapping(path = "/users/{id}")
+	public ResponseEntity<Void> deleteSingleUser(@PathVariable String id) {
+		Optional<User> findOneUser = service.findOneUser(id);
+
+		if (!findOneUser.isPresent()) {
+			// return ResponseEntity.notFound().build();
+			throw new UserNotFoundException("The user with id " + id + " was not found...!!");
+		}
+		
+		service.deleteUser(id);
+
+		return ResponseEntity.ok().build();
 	}
 
 	@PostMapping(path = "/users")

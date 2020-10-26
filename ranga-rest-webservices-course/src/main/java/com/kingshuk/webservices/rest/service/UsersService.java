@@ -26,5 +26,9 @@ public class UsersService {
 	public User createNewUser(User user) {
 		return usersRepository.save(user);
 	}
+	
+	public void deleteUser(String id) {
+		usersRepository.deleteById(Integer.parseInt(id));
+	}
 
 }

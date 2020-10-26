@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -27,7 +29,8 @@ import lombok.ToString;
 @Entity
 @ApiModel(description = "This model works as  DTO for a single user",
 			value = "Social Media User")
-public class User {
+@JsonFilter("SingleUserFetchFilter")
+public class UserWithFilter {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
