@@ -29,7 +29,7 @@ import lombok.ToString;
 @Entity
 @ApiModel(description = "This model works as  DTO for a single user",
 			value = "Social Media User")
-@JsonFilter("SingleUserFetchFilter")
+@JsonFilter("UserFetchFilter")
 public class UserWithFilter {
 	
 	@Id

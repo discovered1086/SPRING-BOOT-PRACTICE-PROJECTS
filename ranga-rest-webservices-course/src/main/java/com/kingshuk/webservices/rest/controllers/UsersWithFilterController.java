@@ -58,7 +58,7 @@ public class UsersWithFilterController {
 	private MappingJacksonValue filterBean(List<UserWithFilter> findOneUser, String... fieldNames) {
 		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept(fieldNames);
 		// Create the filter provider
-		FilterProvider filters = new SimpleFilterProvider().addFilter("SingleUserFetchFilter", filter);
+		FilterProvider filters = new SimpleFilterProvider().addFilter("UserFetchFilter", filter);
 
 		MappingJacksonValue mappingBean = new MappingJacksonValue(findOneUser);
 		mappingBean.setFilters(filters);
