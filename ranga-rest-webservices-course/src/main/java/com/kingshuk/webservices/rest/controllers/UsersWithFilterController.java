@@ -69,7 +69,7 @@ public class UsersWithFilterController {
 	@PostMapping(path = "/users-dynamic-filtering")
 	public ResponseEntity<Object> createNewUser(@Valid @RequestBody UserWithFilter user) {
 		User createNewUser = service
-				.createNewUser(new User(user.getId(), user.getName(), user.getDob(), user.getSsn()));
+				.createNewUser(new User(user.getId(), user.getName(), user.getDob(), user.getSsn(), null));
 
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createNewUser.getId())
 				.toUri();
