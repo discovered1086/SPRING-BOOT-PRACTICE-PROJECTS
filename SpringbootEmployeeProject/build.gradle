@@ -52,8 +52,10 @@ dependencies {
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
+	
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	
 	compile group: 'net.sf.dozer', name: 'dozer', version: '5.5.1'
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
